@@ -7,7 +7,7 @@ import { tech3 } from '@/public/assets'
 const Banner = () => {
   return (
     <div className='relative px-8 lgl:px-32 py-32 bg-cover bg-fixed flex items-center min-h-[80vh]' 
-         style={{ backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2000&auto=format&fit=crop')" }}>
+         style={{ backgroundImage: "url('/assets/images/backgrounds/banner-bg.jpg')" }}>
       
       {/* Overlay to ensure text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-900/80 to-transparent"></div>
@@ -53,7 +53,7 @@ const Banner = () => {
         </div>
       <div className='basis-1/2 px-0 py-0 w-full lgl:w-1/3 hidden lgl:flex justify-center items-center'>
         <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-500 border-4 border-white/20">
-          <Image src={tech3} alt='tech' layout="fill" objectFit="cover" className="hover:scale-110 transition-transform duration-700"/>
+          <Image src={tech3} alt='tech' fill style={{ objectFit: "cover" }} className="hover:scale-110 transition-transform duration-700"/>
         </div>
       </div>   
     </div>

@@ -35,7 +35,7 @@ const about = () => {
                         className='object-cover' 
                         src="/assets/images/about1.jpg" 
                         alt='Our Team'
-                        layout="fill"
+                        fill
                       />                    
                   </div>
               </div>
@@ -84,7 +84,7 @@ const about = () => {
                         className='object-cover' 
                         src="/assets/images/about2.jpg" 
                         alt='Innovation'
-                        layout="fill"
+                        fill
                       />                    
                   </div>
               </div>

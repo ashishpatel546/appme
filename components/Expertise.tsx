@@ -16,8 +16,8 @@ const Expertise = () => {
                         <Image 
                             src={item.image} 
                             alt={item.title} 
-                            layout="fill" 
-                            objectFit="cover" 
+                            fill 
+                            style={{ objectFit: "cover" }} 
                             className="group-hover:scale-110 transition-transform duration-500"
                         />
                     </div>

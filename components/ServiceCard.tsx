@@ -18,8 +18,8 @@ const ServiceCard = ({title, des, link, image}: Props) => {
            <Image 
              src={image} 
              alt={title} 
-             layout="fill" 
-             objectFit="cover" 
+             fill 
+             style={{ objectFit: "cover" }} 
              className="group-hover:scale-110 transition-transform duration-500"
            />
         </div>

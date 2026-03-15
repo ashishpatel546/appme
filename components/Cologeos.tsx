@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const Cologeos = () => {
   return (
-    <section className="relative w-full py-20 bg-cover bg-center text-white" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop')" }}>
+    <section className="relative w-full py-20 bg-cover bg-center text-white" style={{ backgroundImage: "url('/assets/images/backgrounds/cologeos-bg.jpg')" }}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-blue-900 bg-opacity-80"></div>
 
