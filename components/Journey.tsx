@@ -1,57 +1,48 @@
 import React, { useState } from 'react'
-import Year1 from './Year1'
-import Year2 from './Year2'
-import Year3 from './Year3';
-
+import SectionTitle from './SectionTitle';
+import journeyData from '@/public/data/journey.json';
 
 const Journey = () => {
-  const [workJourney1,setWorkJourney1]=useState(true);
-  const [workJourney2,setWorkJourney2]=useState(false);
-  const [workJourney3,setWorkJourney3]=useState(false);
+  const [activeYear, setActiveYear] = useState(journeyData[0].id);
 
-  const handle1=()=>{
-    setWorkJourney1(true)
-    setWorkJourney2(false)
-    setWorkJourney3(false)
+  const handleYearClick = (id: string) => {
+    setActiveYear(id);
   }
 
-  const handle2=()=>{
-    setWorkJourney1(false)
-    setWorkJourney2(true)
-    setWorkJourney3(false)
-  }
-
-  const handle3=()=>{
-    setWorkJourney1(false)
-    setWorkJourney2(false)
-    setWorkJourney3(true)
-  }
+  const activeData = journeyData.find(data => data.id === activeYear);
 
   return (
     <section id='journey' className='max-w-containerxs mx-auto py-10 lgl:py-24 px-4'>
-
-    <h1 className='text-2xl font-bold text-center p-8' >Company journey </h1>
-    <div className='w-full mt-10 flex flex-col md:flex-row gap-16'>
+      <SectionTitle title='Company Journey' />
+      <div className='w-full mt-10 flex flex-col md:flex-row gap-16'>
         <ul className='md:w-32 flex flex-col'>
-            <li onClick={handle1} className='border-l-2 border-l-black text-textDark bg-transparent hover:bg-red-200 py-3 text-sm cursor-pointer
-                            duration-300 px-8 font-medium active'>2019
+          {journeyData.map((data) => (
+            <li 
+              key={data.id}
+              onClick={() => handleYearClick(data.id)} 
+              className={`border-l-2 text-textDark bg-transparent hover:bg-red-200 py-3 text-sm cursor-pointer duration-300 px-8 font-medium ${activeYear === data.id ? 'border-l-black active' : 'border-l-gray-300'}`}
+            >
+              {data.year}
             </li>
-            <li onClick={handle2} className='border-l-2 border-l-black text-textDark bg-transparent hover:bg-red-200 py-3 text-sm cursor-pointer
-                            duration-300 px-8 font-medium'>2020
-            </li>
-            <li onClick={handle3} className='border-l-2 border-l-black text-textDark bg-transparent hover:bg-red-200 py-3 text-sm cursor-pointer
-                            duration-300 px-8 font-medium'>2021
-            </li>
+          ))}
         </ul>
-      {workJourney1 && <Year1 />}
-      {workJourney2 && <Year2 />}
-      {workJourney3 && <Year3 />}
-     
-    </div>
-
-
-
-
+        
+        {activeData && (
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 flex-1">
+            <h3 className='flex gap-1 font-bold text-2xl font-bodyFont text-blue-900 mb-4'>{activeData.title}</h3>
+            {activeData.paragraphs.map((para, index) => (
+              <p key={index} className={`text-gray-700 leading-relaxed ${index === activeData.paragraphs.length - 1 && !activeData.highlight ? '' : 'mb-4'}`}>
+                {para}
+              </p>
+            ))}
+            {activeData.highlight && (
+              <p className='text-blue-600 font-medium'>
+                {activeData.highlight}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
     </section>
   )
 }

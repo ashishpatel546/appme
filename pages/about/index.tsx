@@ -8,6 +8,7 @@ import { Navbar } from '@/components/Navbar'
 import { LeftSide } from '@/components/LeftSide'
 import { RightSide } from '@/components/RightSide'
 import Footer from '@/components/Footer'
+import Journey from '@/components/Journey'
 
 const about = () => {
   return (
@@ -93,6 +94,8 @@ const about = () => {
       </div>
       
     </section>
+
+    <Journey />
 
     <div className="hidden xl:inline-flex w-32 h-full fixed right-0 bottom-0">
           <RightSide />

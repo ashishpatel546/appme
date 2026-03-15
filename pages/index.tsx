@@ -1,7 +1,6 @@
 import Banner from "@/components/Banner";
 import Expertise from "@/components/Expertise";
 import FooterHome from "@/components/FooterHome";
-import Journey from "@/components/Journey";
 import { Navbar } from "@/components/Navbar";
 import Cologeos from "@/components/Cologeos";
 import Products from "@/components/Products";
@@ -22,7 +21,6 @@ export default function Home() {
         <Expertise />
         <Products />
         <Cologeos />
-        <Journey />
         <FooterHome />
       </div>    
     </main>

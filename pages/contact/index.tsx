@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { CiLocationOn } from 'react-icons/ci'
 import { FiPhone } from 'react-icons/fi'
 import { AiOutlineMail } from 'react-icons/ai'
+import { FaWhatsapp } from 'react-icons/fa'
 import QRCode from 'react-qr-code'
 import SectionTitle from '@/components/SectionTitle'
 import { Navbar } from '@/components/Navbar'
@@ -48,13 +49,13 @@ const Contact = () => {
       <div className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0">
         <LeftSide />
       </div>
-      <section id='contactUs' className='max-w-contentContainer mx-auto lgl:px-12 py-20'>
+      <section id='contactUs' className='max-w-contentContainer mx-auto px-4 sm:px-8 lgl:px-12 py-20'>
 
         <SectionTitle title='Contact Us' />
 
-        <div className='grid grid-cols-2 gap-2'>
-          <div className="container -mx-4 flex flex-col lgl:flex-row flex-wrap lg:justify-between ">
-            <div className="w-full  px-4">
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
+          <div className="container mx-auto flex flex-col lgl:flex-row flex-wrap lg:justify-between ">
+            <div className="w-full">
               <h2 className="pt-8 font-bold italic mb-6 text-[16px] uppercase sm:text-[16px] lg:text-[26px] 
                     xl:text-[ 16px] text-blue-900"> GET IN TOUCH WITH US </h2>
               <p className=" mb-9 text-base leading-relaxed text-gray-700">
@@ -91,8 +92,20 @@ const Contact = () => {
                 </div>
               </div>
 
+              <div className="mb-8 flex w-full max-w-[370px]">
+                <div className=" flex h-[60px] w-full max-w-[60px] items-center justify-center text-green-600">
+                  <FaWhatsapp size='30px' />
+                </div>
+                <div className="w-full">
+                  <h4 className="text-dark mb-1 text-xl font-semibold">WhatsApp</h4>
+                  <a href="https://wa.me/919716160389" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
+                    Click to chat with us
+                  </a>
+                </div>
+              </div>
+
               {/* QR Code Section */}
-              <div className="mb-8 flex w-full max-w-[370px] flex-col mt-4">
+              <div className="mb-0 md:mb-8 flex w-full max-w-[370px] flex-col mt-4">
                 <h4 className="text-dark mb-4 text-xl font-semibold">Scan to Chat on WhatsApp</h4>
                 <div className="bg-white p-4 rounded-lg shadow-md inline-block w-fit">
                   <QRCode 
@@ -107,8 +120,8 @@ const Contact = () => {
           </div>
 
 
-          <div className="w-full pt-10 grid">
-            <div className=" rounded-lg bg-white shadow-[0_0_15px_rgba(0,0,0,0.1)] h-fit sm:p-8 border border-gray-100">
+          <div className="w-full grid">
+            <div className=" rounded-lg bg-white shadow-[0_0_15px_rgba(0,0,0,0.1)] h-fit p-6 sm:p-8 border border-gray-100">
               <form onSubmit={handleWhatsAppSubmit}>
                 <div className="mb-6">
                   <input

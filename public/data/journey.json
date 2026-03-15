@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "year": "2024",
+    "title": "Inception & Foundation",
+    "paragraphs": [
+      "Our journey began with a clear vision: to revolutionize the way businesses leverage technology. We started as a small, passionate team of developers and strategists committed to delivering high-quality cloud and software solutions.",
+      "During our first year, we successfully launched our core service offerings and partnered with our first 10 enterprise clients, setting the stage for rapid growth and innovation in the tech space."
+    ],
+    "highlight": ""
+  },
+  {
+    "id": "2",
+    "year": "2025",
+    "title": "Expansion & Product Launch",
+    "paragraphs": [
+      "Building on our initial success, we expanded our team and our capabilities. We began exploring comprehensive product developments tailored for the educational sector, laying the groundwork for our flagship product.",
+      "This year marked our transition from being solely a service provider to a product-driven enterprise, allowing us to offer more specialized and scalable solutions to a broader market."
+    ],
+    "highlight": ""
+  },
+  {
+    "id": "3",
+    "year": "2026",
+    "title": "Rebranding & Innovation",
+    "paragraphs": [
+      "Embracing our new identity as AppMe Pvt Ltd, we launched our complete School Management System, Cologeos. This year is all about scaling our solutions and redefining how schools manage their operations.",
+      "With a more energetic, enthusiastic, and broader team, we are innovating at a faster pace than ever before, bringing cutting edge Cloud, AI/ML, and DevOps solutions to clients globally."
+    ],
+    "highlight": "Looking ahead, our commitment remains steadfast: delivering excellence and driving technological advancement."
+  }
+]
