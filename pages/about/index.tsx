@@ -18,54 +18,76 @@ const about = () => {
           <LeftSide />
             </div>
 
-    <section id='about' className='max-w-containerSmall mx-auto lgl:py-32 flex flex-col gap-8'>
+    <section id='about' className='max-w-contentContainer mx-auto px-4 lgl:px-12 py-20 flex flex-col gap-16'>
 
-    <SectionTitle title='About'/>
+      <SectionTitle title='About AppMe'/>
 
-    <div className='flex flex-col lgl:flex-row gap-16'>
-        <div className='w-full lgl:w-2/3 text-gray-800 font-medium flex flex-col gap-6 text-lg'>
-            <p>
-                At AppMe Pvt Ltd, we are driven by a passion for technology and a commitment to solving complex business challenges. Since our inception, we have evolved from a traditional service provider into a dynamic, product-driven enterprise that thrives on innovation.
-            </p>
-            <p>
-                Our flagship product, Cologeos, is a testament to our dedication to transforming the educational landscape with robust, intuitive school management solutions. Whether it's architecting cloud infrastructure, deploying AI-driven systems, or building scalable web applications, our team delivers excellence at every step.
-            </p>
-            <p className="font-semibold text-blue-900 mt-2">We ensure to be in-line with the latest technologies like:</p>
-            <ul className='max-w-[450px] text-sm grid grid-cols-2 gap-2 mt-6'>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>JavaScript</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>DevOps</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>Machine Learning</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>Cloud</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>Data Analytics</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>Artificial Intelligence</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>IOT</li>
-                <li className='flex items-center gap-2'><span className='text-blue-900'>
-                    <AiFillThunderbolt /></span>Automation</li>
+      {/* Our Story Section */}
+      <div className='flex flex-col lgl:flex-row gap-16 items-center'>
+          <div className='w-full lgl:w-1/2 h-96 relative group hover:scale-105 transition-transform duration-500'>
+              <div className='w-full absolute h-96 -left-4 -top-4 rounded-xl z-10'>
+                  <div className='w-full h-full relative shadow-2xl rounded-xl overflow-hidden'>
+                      <Image 
+                        className='object-cover' 
+                        src="/assets/images/about1.jpg" 
+                        alt='Our Team'
+                        layout="fill"
+                      />                    
+                  </div>
+              </div>
+              <div className='hidden lgl:block w-full h-96 border-4 border-blue-900 rounded-xl'></div>
+          </div>
+          
+          <div className='w-full lgl:w-1/2 text-gray-800 font-medium flex flex-col gap-6 text-lg'>
+              <h3 className="text-3xl font-bold text-blue-900">Our Story</h3>
+              <p className="leading-relaxed">
+                  At AppMe Pvt Ltd, we are driven by a passion for technology and a commitment to solving complex business challenges. Since our inception, we have evolved from a traditional service provider into a dynamic, product-driven enterprise that thrives on innovation.
+              </p>
+              <p className="leading-relaxed">
+                  We started with a vision to empower organizations by building state-of-the-art technological solutions. Today, we stand as a beacon of progress, delivering high-performance products and uncompromised consulting services globally.
+              </p>
+          </div>
+      </div>
 
-                
-            </ul>
-        </div>
-        <div className='w-full lgl:w-1/3 h-80 relative group hover:scale-105 transition-transform duration-500'>
-            <div className='w-full absolute h-80 -left-4 -top-4 rounded-xl z-10'>
-                <div className='w-full h-full relative shadow-2xl rounded-xl overflow-hidden'>
-                    <Image 
-                      className='object-cover' 
-                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" 
-                      alt='About AppMe'
-                      layout="fill"
-                    />                    
-                </div>
-            </div>
-            <div className='lgl:inline-flex w-full h-80 border-4 border-blue-900 rounded-xl'></div>
-        </div>
-    </div>
+      {/* Our Mission & Tech Stack Section */}
+      <div className='flex flex-col-reverse lgl:flex-row gap-16 items-center mt-12'>
+          <div className='w-full lgl:w-1/2 text-gray-800 font-medium flex flex-col gap-6 text-lg'>
+              <h3 className="text-3xl font-bold text-blue-900">Our Mission</h3>
+              <p className="leading-relaxed">
+                  Our flagship product, Cologeos, is a testament to our dedication to transforming the educational landscape with robust, intuitive school management solutions. 
+              </p>
+              <p className="leading-relaxed">
+                  Whether it's architecting cloud infrastructure, deploying AI-driven systems, or building scalable web applications, our team delivers excellence at every step.
+              </p>
+              
+              <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-textGreen mt-4">
+                <p className="font-bold text-blue-900 mb-4">Core Technologies We Leverage:</p>
+                <ul className='grid grid-cols-2 gap-4 text-base'>
+                    <li className='flex items-center gap-2'><span className='text-textGreen'><AiFillThunderbolt /></span>Cloud Architecture</li>
+                    <li className='flex items-center gap-2'><span className='text-textGreen'><AiFillThunderbolt /></span>DevOps & CI/CD</li>
+                    <li className='flex items-center gap-2'><span className='text-textGreen'><AiFillThunderbolt /></span>Machine Learning</li>
+                    <li className='flex items-center gap-2'><span className='text-textGreen'><AiFillThunderbolt /></span>Data Analytics</li>
+                    <li className='flex items-center gap-2'><span className='text-textGreen'><AiFillThunderbolt /></span>Modern JS Frameworks</li>
+                    <li className='flex items-center gap-2'><span className='text-textGreen'><AiFillThunderbolt /></span>Cyber Security</li>
+                </ul>
+              </div>
+          </div>
+          
+          <div className='w-full lgl:w-1/2 h-96 relative group hover:scale-105 transition-transform duration-500'>
+              <div className='w-full absolute h-96 right-4 top-4 rounded-xl z-10'>
+                  <div className='w-full h-full relative shadow-2xl rounded-xl overflow-hidden'>
+                      <Image 
+                        className='object-cover' 
+                        src="/assets/images/about2.jpg" 
+                        alt='Innovation'
+                        layout="fill"
+                      />                    
+                  </div>
+              </div>
+              <div className='hidden lgl:block w-full h-96 border-4 border-textGreen rounded-xl'></div>
+          </div>
+      </div>
+      
     </section>
 
     <div className="hidden xl:inline-flex w-32 h-full fixed right-0 bottom-0">

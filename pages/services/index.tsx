@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Navbar } from '@/components/Navbar'
 import SectionTitle from '@/components/SectionTitle'
 import ServiceCard from '@/components/ServiceCard'
 import { LeftSide } from '@/components/LeftSide'
 import { RightSide } from '@/components/RightSide'
 import Footer from '@/components/Footer'
-
+import servicesData from '@/public/data/services.json'
 
 const services = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [showMore,setShowMore] = useState(false);
   return (
     <>
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
@@ -17,7 +15,7 @@ const services = () => {
 
       <div className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0">
           <LeftSide />
-            </div>
+      </div>
 
       <section id='services' className='max-w-contentContainer mx-auto lgl:px-12 py-20 text-black'>
         <SectionTitle title='Services' />
@@ -41,24 +39,15 @@ const services = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10'>
-           <ServiceCard title='Product Development'
-                        des='We build robust, scalable, and intuitive software products from ideation to launch. Our comprehensive product development lifecycle ensures that your vision becomes a market-ready reality.'
-                        link='#' />
-            <ServiceCard title='IT Consultancies'
-                        des='Strategic technology guidance to align your IT infrastructure with business goals. We provide expert advice on digital transformation, architecture, and technology adoption.'
-                        link='#' />
-            <ServiceCard title='Cloud Solutions'
-                        des='Seamless cloud migration, re-architecture, and management. We specialize in developing microservice-based applications tailored for high availability and scalability.'
-                        link='#' />
-            <ServiceCard title='DevOps Engineering'
-                        des='Streamline your software delivery with CI/CD implementations, Infrastructure as Code (Terraform), and robust Kubernetes orchestration, ensuring rapid and reliable deployments.'
-                        link='#' />
-            <ServiceCard title='Cyber Security Services'
-                        des='Protect your digital assets with our comprehensive, end-to-end cybersecurity solutions. We implement rigorous security protocols to safeguard your data against modern threats.'
-                        link='#' />
-            <ServiceCard title='Data Analytics & AI/ML'
-                        des='Transform your data into actionable insights. We leverage Hadoop, Spark, Python, and modern machine learning algorithms to build intelligent, predictive systems.'
-                        link='#' />
+           {servicesData.map((item) => (
+             <ServiceCard 
+               key={item.id}
+               title={item.title}
+               des={item.des}
+               link={item.link}
+               image={item.image}
+             />
+           ))}
         </div>
     </section>
 

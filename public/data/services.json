@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Product Development",
+    "des": "We build robust, scalable, and intuitive software products from ideation to launch. Our comprehensive product development lifecycle ensures that your vision becomes a market-ready reality.",
+    "link": "#",
+    "image": "/assets/images/product.jpg"
+  },
+  {
+    "id": 2,
+    "title": "IT Consultancies",
+    "des": "Strategic technology guidance to align your IT infrastructure with business goals. We provide expert advice on digital transformation, architecture, and technology adoption.",
+    "link": "#",
+    "image": "/assets/images/consulting.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Cloud Solutions",
+    "des": "Seamless cloud migration, re-architecture, and management. We specialize in developing microservice-based applications tailored for high availability and scalability.",
+    "link": "#",
+    "image": "/assets/images/cloud.jpg"
+  },
+  {
+    "id": 4,
+    "title": "DevOps Engineering",
+    "des": "Streamline your software delivery with CI/CD implementations, Infrastructure as Code (Terraform), and robust Kubernetes orchestration, ensuring rapid and reliable deployments.",
+    "link": "#",
+    "image": "/assets/images/devops.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Cyber Security Services",
+    "des": "Protect your digital assets with our comprehensive, end-to-end cybersecurity solutions. We implement rigorous security protocols to safeguard your data against modern threats.",
+    "link": "#",
+    "image": "/assets/images/security.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Data Analytics & AI/ML",
+    "des": "Transform your data into actionable insights. We leverage Hadoop, Spark, Python, and modern machine learning algorithms to build intelligent, predictive systems.",
+    "link": "#",
+    "image": "/assets/images/data.jpg"
+  }
+]
