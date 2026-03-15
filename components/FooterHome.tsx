@@ -12,8 +12,8 @@ const FooterHome = () => {
     <div className='container mx-auto px-6 lg:px-12 py-16'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
             <div className='flex flex-col items-center md:items-start'>
-                <div className="text-3xl font-extrabold text-white tracking-tighter flex items-center gap-1 mb-6">
-                    <div className="w-8 h-8 bg-white text-blue-900 rounded-lg flex items-center justify-center text-xl shadow-lg">A</div>
+                <div className="text-3xl md:text-4xl font-black text-white tracking-tighter flex items-center gap-1 mb-6">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-white text-blue-900 rounded-lg flex items-center justify-center text-xl md:text-2xl shadow-lg">A</div>
                     pp<span className="text-green-400">Me</span>
                 </div>
                 <p className='text-blue-100 text-center md:text-left leading-relaxed max-w-sm'>

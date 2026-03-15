@@ -28,8 +28,8 @@ export const Navbar = () => {
     <div className='w-full shadow-md h-16 lg:h-20 sticky top-0 z-50 bg-white px-4 transition-all duration-300'>
      <div className='max-w-container h-full mx-auto py-1 font-bodyFont flex items-center justify-between'>
         <Link href="/">
-            <div className="text-3xl font-extrabold text-blue-900 tracking-tighter cursor-pointer flex items-center gap-1 hover:scale-105 transition-transform">
-               <div className="w-8 h-8 bg-blue-900 text-white rounded-lg flex items-center justify-center text-xl shadow-lg">A</div>
+            <div className="text-2xl md:text-3xl font-black text-blue-900 tracking-tighter cursor-pointer flex items-center gap-1 hover:scale-105 transition-transform">
+               <div className="w-7 h-7 md:w-8 md:h-8 bg-blue-900 text-white rounded-lg flex items-center justify-center text-lg md:text-xl shadow-lg">A</div>
                pp<span className="text-green-600">Me</span>
             </div>
         </Link>

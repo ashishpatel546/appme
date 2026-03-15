@@ -6,7 +6,7 @@ import { tech3 } from '@/public/assets'
 
 const Banner = () => {
   return (
-    <div className='relative px-8 lgl:px-32 py-32 bg-cover bg-fixed flex items-center min-h-[80vh]' 
+    <div className='relative px-4 sm:px-8 lgl:px-32 py-24 sm:py-32 bg-cover bg-fixed flex items-center min-h-[80vh]' 
          style={{ backgroundImage: "url('/assets/images/backgrounds/banner-bg.jpg')" }}>
       
       {/* Overlay to ensure text readability */}
@@ -14,39 +14,41 @@ const Banner = () => {
       
       <div className='relative container mx-auto flex flex-col lgl:flex-row z-10'>
         <div className='basis-1/2 w-full lgl:w-2/3 py-2 text-white'>
-          <span className='text-3xl md:text-6xl font-extrabold tracking-tight text-white mb-4 block'>AppMe Pvt Ltd.</span>
+          <span className='text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white mb-4 block drop-shadow-md'>AppMe Pvt Ltd.</span>
           
           <div className='pt-1'> </div>
-          <p className='text-blue-200 font-semibold text-xl md:text-2xl max-w-2xl leading-relaxed italic border-l-4 border-blue-400 pl-4 mb-6'>
+          <p className='text-blue-200 font-semibold text-lg sm:text-xl md:text-2xl max-w-2xl leading-relaxed italic border-l-4 border-blue-400 pl-4 mb-6'>
             Previously Sologence Technologies Pvt Ltd. Now more energetic, more enthusiastic, with broader team and innovation we are AppMe Pvt Ltd.
           </p>
             
             <div className='pt-4'></div>
-            <h3 className='md:text-3xl mt-3 font-bold text-textGreen flex gap-2'>
+            <h3 className='text-xl sm:text-2xl md:text-3xl mt-3 font-bold text-textGreen flex flex-col gap-2'>
             <span className="text-white">We Specialize in:</span>
-            <Typewriter options={
-                {
-                  strings: [ "Cloud Computing" , "Cyber Security" , "AI/ML", "Product Development", "School Management Systems" ] ,
-                  delay: 30 ,
-                  deleteSpeed: 20 ,
-                  autoStart: true ,
-                  loop: true 
-                }
-              } />
+            <span className="whitespace-nowrap">
+              <Typewriter options={
+                  {
+                    strings: [ "Cloud Computing" , "Cyber Security" , "AI/ML", "Product Development", "School Management Systems" ] ,
+                    delay: 30 ,
+                    deleteSpeed: 20 ,
+                    autoStart: true ,
+                    loop: true 
+                  }
+                } />
+            </span>
             </h3>
             <div className='pt-6'></div>
-            <p className='text-gray-200 text-lg max-w-2xl leading-relaxed mb-8'>
+            <p className='text-gray-200 text-base sm:text-lg max-w-2xl leading-relaxed mb-8'>
               Empowering businesses with cutting-edge technology solutions. From advanced cloud infrastructure to 
               comprehensive school management systems like Cologeos, we deliver innovation that drives real results.
             </p>
 
             <div className='pt-4'>
-            <div className='flex space-x-6'>
+            <div className='flex space-x-3 sm:space-x-6'>
             <Link href="/contact">
-              <button className='px-8 py-4 rounded-md font-bold text-blue-900 bg-white hover:bg-slate-200 hover:-translate-y-1 transition-all duration-300 shadow-lg'>Contact Us</button>
+              <button className='px-5 py-2 sm:px-8 sm:py-3.5 text-sm sm:text-base rounded-md font-bold text-blue-900 bg-white border-2 border-transparent hover:bg-slate-200 hover:border-slate-200 hover:-translate-y-1 transition-all duration-300 shadow-lg'>Contact Us</button>
             </Link>
             <Link href="/services">
-              <button className='px-8 py-4 rounded-md font-bold text-white bg-transparent border-2 border-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300'>Services</button>
+              <button className='px-5 py-2 sm:px-8 sm:py-3.5 text-sm sm:text-base rounded-md font-bold text-white bg-transparent border-2 border-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300'>Services</button>
             </Link>
             </div>
           </div>

@@ -16,7 +16,7 @@ const Cologeos = () => {
             Manage attendance, exams, fees, and more with ease.
           </p>
           <a href="https://cologeos.in" target="_blank" rel="noopener noreferrer">
-            <button className="px-8 py-4 bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:bg-slate-200 transition-all hover:-translate-y-1 hover:shadow-xl duration-300">
+            <button className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:bg-slate-200 transition-all hover:-translate-y-1 hover:shadow-xl duration-300">
               Visit Cologeos Website
             </button>
           </a>
