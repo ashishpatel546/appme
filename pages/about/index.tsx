@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import {AiFillThunderbolt} from 'react-icons/ai'
 import Image from 'next/image'
 import { tech3 } from '@/public/assets'
@@ -11,6 +12,9 @@ import Footer from '@/components/Footer'
 const about = () => {
   return (
     <>
+    <Head>
+      <title>About AppMe</title>
+    </Head>
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
       <Navbar />
 
@@ -57,7 +61,7 @@ const about = () => {
                   Our flagship product, Cologeos, is a testament to our dedication to transforming the educational landscape with robust, intuitive school management solutions. 
               </p>
               <p className="leading-relaxed">
-                  Whether it's architecting cloud infrastructure, deploying AI-driven systems, or building scalable web applications, our team delivers excellence at every step.
+                  Whether it&apos;s architecting cloud infrastructure, deploying AI-driven systems, or building scalable web applications, our team delivers excellence at every step.
               </p>
               
               <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-textGreen mt-4">

@@ -1,11 +1,10 @@
-
 import Banner from "@/components/Banner";
 import Expertise from "@/components/Expertise";
 import FooterHome from "@/components/FooterHome";
 import Journey from "@/components/Journey";
 import { Navbar } from "@/components/Navbar";
 import Cologeos from "@/components/Cologeos";
-
+import Products from "@/components/Products";
 
 import Head from "next/head";
 
@@ -21,6 +20,7 @@ export default function Home() {
       <div>
         <Banner />
         <Expertise />
+        <Products />
         <Cologeos />
         <Journey />
         <FooterHome />

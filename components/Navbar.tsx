@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useRef, useState } from 'react'
 import {MdOutlineSegment,MdClose} from 'react-icons/md'
 
 
 export const Navbar = () => {
 
+   const router = useRouter()
    const ref= useRef<string | any>("")
 
    const [showMenu,setShowMenu]= useState(false);
@@ -14,6 +16,13 @@ export const Navbar = () => {
          setShowMenu(false);
       }
    }
+
+   const navLinks = [
+      { title: 'Home', path: '/' },
+      { title: 'About', path: '/about' },
+      { title: 'Services', path: '/services' },
+      { title: 'Contact Us', path: '/contact' },
+   ]
 
   return (
     <div className='w-full shadow-md h-16 lg:h-20 sticky top-0 z-50 bg-white px-4 transition-all duration-300'>
@@ -25,19 +34,30 @@ export const Navbar = () => {
             </div>
         </Link>
          <div className=' hidden mdl:inline-flex items-center gap-6'>
-            <ul className='flex text-30px gap-8'>
-                <Link href="/"  className='flex items-center gap-2 font-medium text-sky-800
-                   hover:text-textGreen cursor-pointer duration-300'><li>Home</li></Link>
-
-                <Link href="/about"  className='flex items-center gap-2 font-medium text-sky-800
-                   hover:text-textGreen cursor-pointer duration-300'><li>About</li></Link>
-
-                <Link href="/services" className='flex items-center gap-2 font-medium text-sky-800
-                   hover:text-textGreen cursor-pointer duration-300'><li>Services</li></Link>
-                
-                <Link href="/contact"  className='flex items-center gap-2 font-medium text-sky-800
-                   hover:text-textGreen cursor-pointer duration-300'><li>Contact Us</li></Link>
-                
+            <ul className='flex text-[16px] gap-8'>
+               {navLinks.map((item) => {
+                  const isActive = router.pathname === item.path;
+                  return (
+                     <li key={item.path}>
+                        <Link 
+                           href={item.path} 
+                           className={`relative flex items-center gap-2 font-medium cursor-pointer transition-colors duration-300 group ${
+                              isActive ? 'text-textGreen' : 'text-sky-800 hover:text-textGreen'
+                           }`}
+                        >
+                           {item.title}
+                           {/* Active underline */}
+                           {isActive && (
+                              <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-textGreen rounded-md"></span>
+                           )}
+                           {/* Hover underline */}
+                           {!isActive && (
+                              <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-textGreen rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                           )}
+                        </Link>
+                     </li>
+                  );
+               })}
             </ul>
          </div>
          
@@ -54,17 +74,27 @@ export const Navbar = () => {
                         <MdClose size={30} onClick={()=>setShowMenu(false)} className='cursor-pointer hover:text-red-500 absolute top-4 right-4'/>
                         <div>
                            <ul className='flex flex-col text-base gap-7'>
-                           <Link href="/"  className='flex items-center gap-2 font-medium text-textLight
-                              hover:text-textGreen cursor-pointer duration-300' ><li>Home</li></Link>
-
-                           <Link href="/about"  className='flex items-center gap-2 font-medium text-textLight
-                              hover:text-textGreen cursor-pointer duration-300' ><li>About</li></Link>
-
-                           <Link href="/services" className='flex items-center gap-2 font-medium text-textLight
-                              hover:text-textGreen cursor-pointer duration-300' ><li>Services</li></Link>
-                
-                           <Link href="/contact"  className='flex items-center gap-2 font-medium text-textLight
-                              hover:text-textGreen cursor-pointer duration-300' ><li>Contact Us</li></Link>
+                              {navLinks.map((item) => {
+                                 const isActive = router.pathname === item.path;
+                                 return (
+                                    <li key={item.path}>
+                                       <Link 
+                                          href={item.path} 
+                                          className={`relative flex items-center gap-2 font-medium cursor-pointer transition-colors duration-300 group ${
+                                             isActive ? 'text-textGreen' : 'text-textLight hover:text-textGreen'
+                                          }`}
+                                       >
+                                          {item.title}
+                                          {isActive && (
+                                             <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-textGreen rounded-md"></span>
+                                          )}
+                                          {!isActive && (
+                                             <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-textGreen rounded-md transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                                          )}
+                                       </Link>
+                                    </li>
+                                 );
+                              })}
                            </ul>
                         </div>
                      </div>

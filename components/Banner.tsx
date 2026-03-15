@@ -1,6 +1,7 @@
 import React from 'react'
 import Typewriter from "typewriter-effect"
 import Image from 'next/image'
+import Link from 'next/link'
 import { tech3 } from '@/public/assets'
 
 const Banner = () => {
@@ -25,7 +26,7 @@ const Banner = () => {
             <span className="text-white">We Specialize in:</span>
             <Typewriter options={
                 {
-                  strings: [ "Cloud Computing" , "Cyber Security" , "AI/ML", "NodeJS", "School Management Systems" ] ,
+                  strings: [ "Cloud Computing" , "Cyber Security" , "AI/ML", "Product Development", "School Management Systems" ] ,
                   delay: 30 ,
                   deleteSpeed: 20 ,
                   autoStart: true ,
@@ -41,8 +42,12 @@ const Banner = () => {
 
             <div className='pt-4'>
             <div className='flex space-x-6'>
-            <button className='px-8 py-4 rounded-md font-bold text-blue-900 bg-white hover:bg-slate-200 hover:-translate-y-1 transition-all duration-300 shadow-lg'>Explore</button>
-            <button className='px-8 py-4 rounded-md font-bold text-white bg-transparent border-2 border-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300'>Services</button>
+            <Link href="/contact">
+              <button className='px-8 py-4 rounded-md font-bold text-blue-900 bg-white hover:bg-slate-200 hover:-translate-y-1 transition-all duration-300 shadow-lg'>Contact Us</button>
+            </Link>
+            <Link href="/services">
+              <button className='px-8 py-4 rounded-md font-bold text-white bg-transparent border-2 border-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300'>Services</button>
+            </Link>
             </div>
           </div>
         </div>

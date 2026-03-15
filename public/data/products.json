@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "URL Shortener",
+    "description": "Transform long, unwieldy links into concise, shareable URLs. Our robust URL shortener provides click analytics, custom aliases, and high-speed redirection, making it perfect for marketing campaigns and social media sharing.",
+    "image": "/assets/images/products/url-shortener-v5.jpg"
+  },
+  {
+    "id": 2,
+    "title": "AI Custom Chatbot",
+    "description": "Engage your customers 24/7 with an intelligent AI chatbot tailored exactly to your business needs. Provide instant support, generate leads, and automate repetitive inquiries seamlessly.",
+    "image": "/assets/images/products/ai-chatbot-v5.jpg"
+  },
+  {
+    "id": 3,
+    "title": "AI Document Processing",
+    "description": "Automate data extraction and document analysis with cutting-edge AI. Accurately digitize invoices, receipts, and forms, saving countless hours of manual data entry while reducing human error.",
+    "image": "/assets/images/products/ai-doc-v2.jpg"
+  },
+  {
+    "id": 4,
+    "title": "AI Marketing Idea Generator",
+    "description": "Overcome creative block with our AI-powered marketing assistant. Generate compelling ad copy, brainstorm social media campaigns, and discover innovative strategies to elevate your brand presence.",
+    "image": "/assets/images/products/ai-marketing-v2.jpg"
+  },
+  {
+    "id": 5,
+    "title": "AI Trip Planner",
+    "description": "Experience personalized travel planning at its finest. Our AI Trip Planner crafts optimized itineraries based on your preferences, budget, and time, ensuring every journey is an unforgettable adventure.",
+    "image": "/assets/images/products/ai-trip-v2.jpg"
+  },
+  {
+    "id": 6,
+    "title": "School Management System",
+    "description": "A comprehensive, easy-to-use platform to streamline academic administration. Manage student records, attendance, fee collection, and exams all from a single, intuitive dashboard.",
+    "image": "/assets/images/products/school-v2.jpg"
+  }
+]

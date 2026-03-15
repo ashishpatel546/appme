@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Cloud Computing",
+    "description": "We architect and implement scalable, secure cloud solutions. By leveraging modern cloud platforms, we help businesses achieve greater agility, reduce IT costs, and accelerate their digital transformation journey.",
+    "image": "/assets/images/expertise/cloud-computing.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Product Development",
+    "description": "From concept to deployment, we build robust, user-centric software products. We specialize in product development to translate innovative ideas into scalable, high-quality digital solutions that drive business growth.",
+    "image": "/assets/images/expertise/product-development.jpg"
+  },
+  {
+    "id": 3,
+    "title": "AI/ML",
+    "description": "Unlock the power of your data with our Artificial Intelligence and Machine Learning solutions. We create intelligent systems that automate processes, generate insights, and provide actionable business intelligence.",
+    "image": "/assets/images/expertise/ai-ml.jpg"
+  }
+]

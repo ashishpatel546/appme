@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import { Navbar } from '@/components/Navbar'
 import SectionTitle from '@/components/SectionTitle'
 import ServiceCard from '@/components/ServiceCard'
@@ -10,6 +11,9 @@ import servicesData from '@/public/data/services.json'
 const services = () => {
   return (
     <>
+    <Head>
+      <title>Services - AppMe</title>
+    </Head>
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
       <Navbar />
 
