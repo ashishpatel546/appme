@@ -2,11 +2,17 @@ import React from 'react'
 
 const Year3 = () => {
   return (
-    <div>
-        <h3 className='flex gap-1 font-medium text-xl font-bodyFont text-teal-900'>HJJK</h3>
-        <p className='text-base flex gap-2 text-black'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque sequi dignissimos alias numquam ipsa modi, fugiat consequuntur soluta vitae, consectetur odit excepturi, cum aperiam maiores sunt voluptates itaque similique? Veniam, eum accusamus? Consequuntur doloremque eius nulla! Obcaecati, animi atque. Repellat!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ad deleniti quibusdam suscipit! Porro officia unde voluptatem? Doloribus, tempora cupiditate.</p>
-        <p className='text-red-800'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, temporibus?</p>
+    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+        <h3 className='flex gap-1 font-bold text-2xl font-bodyFont text-blue-900 mb-4'>Rebranding & Innovation</h3>
+        <p className='text-base flex gap-2 text-gray-700 leading-relaxed mb-4'>
+            Embracing our new identity as AppMe Pvt Ltd, we launched our complete School Management System, Cologeos. This year is all about scaling our solutions and redefining how schools manage their operations.
+        </p>
+        <p className="text-gray-700 leading-relaxed mb-4">
+            With a more energetic, enthusiastic, and broader team, we are innovating at a faster pace than ever before, bringing cutting edge Cloud, AI/ML, and DevOps solutions to clients globally.
+        </p>
+        <p className='text-blue-600 font-medium'>
+            Looking ahead, our commitment remains steadfast: delivering excellence and driving technological advancement.
+        </p>
     </div>
   )
 }

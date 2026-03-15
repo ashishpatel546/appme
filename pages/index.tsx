@@ -2,9 +2,9 @@
 import Banner from "@/components/Banner";
 import Expertise from "@/components/Expertise";
 import FooterHome from "@/components/FooterHome";
-import Gallery from "@/components/Gallery";
 import Journey from "@/components/Journey";
 import { Navbar } from "@/components/Navbar";
+import Cologeos from "@/components/Cologeos";
 
 
 import Head from "next/head";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>G company</title>
+      <title>AppMe Pvt Ltd.</title>
     </Head>
     <main>
       <Navbar />
@@ -21,8 +21,8 @@ export default function Home() {
       <div>
         <Banner />
         <Expertise />
+        <Cologeos />
         <Journey />
-        <Gallery />
         <FooterHome />
       </div>    
     </main>

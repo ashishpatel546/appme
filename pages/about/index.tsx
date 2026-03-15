@@ -23,16 +23,14 @@ const about = () => {
     <SectionTitle title='About'/>
 
     <div className='flex flex-col lgl:flex-row gap-16'>
-        <div className='w-full lgl:w-2/3 text-black font-medium flex flex-col gap-4'>
+        <div className='w-full lgl:w-2/3 text-gray-800 font-medium flex flex-col gap-6 text-lg'>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quasi delectus velit aliquid architecto!
-                 Aliquid tempora accusantium numquam laborum vero accusamus necessitatibus quisquam deleniti! Molestias
-                  repudiandae dolorem itaque est odit nostrum. Placeat dolore, iste nostrum totam officiis esse. 
-                  Officia eveniet voluptates tempora ipsa minus minima, asperiores libero? Quia expedita molestiae
-                   itaque, incidunt blanditiis, voluptas vel impedit fugiat nobis quibusdam iusto aut nemo esse dolore? 
-                   Aperiam, 
+                At AppMe Pvt Ltd, we are driven by a passion for technology and a commitment to solving complex business challenges. Since our inception, we have evolved from a traditional service provider into a dynamic, product-driven enterprise that thrives on innovation.
             </p>
-            <p>We ensure to be in-line with the latest technologies like:</p>
+            <p>
+                Our flagship product, Cologeos, is a testament to our dedication to transforming the educational landscape with robust, intuitive school management solutions. Whether it's architecting cloud infrastructure, deploying AI-driven systems, or building scalable web applications, our team delivers excellence at every step.
+            </p>
+            <p className="font-semibold text-blue-900 mt-2">We ensure to be in-line with the latest technologies like:</p>
             <ul className='max-w-[450px] text-sm grid grid-cols-2 gap-2 mt-6'>
                 <li className='flex items-center gap-2'><span className='text-blue-900'>
                     <AiFillThunderbolt /></span>JavaScript</li>
@@ -54,13 +52,18 @@ const about = () => {
                 
             </ul>
         </div>
-        <div className='w-full lgl:w-1/3 h-80 relative group'>
-            <div className='w-full absolute h-80 -left-6 -top-6 rounded-lg'>
-                <div className='w-full h-full flex lgl:pl-0'>
-                    <Image className='rounded-lg h-full object-cover' src={tech3} alt='tech3'/>                    
+        <div className='w-full lgl:w-1/3 h-80 relative group hover:scale-105 transition-transform duration-500'>
+            <div className='w-full absolute h-80 -left-4 -top-4 rounded-xl z-10'>
+                <div className='w-full h-full relative shadow-2xl rounded-xl overflow-hidden'>
+                    <Image 
+                      className='object-cover' 
+                      src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" 
+                      alt='About AppMe'
+                      layout="fill"
+                    />                    
                 </div>
             </div>
-            <div className='lgl:inline-flex w-full h-80 border-2 border-gray-500 rounded-md'></div>
+            <div className='lgl:inline-flex w-full h-80 border-4 border-blue-900 rounded-xl'></div>
         </div>
     </div>
     </section>

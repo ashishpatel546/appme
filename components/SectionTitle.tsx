@@ -4,9 +4,12 @@ interface Props{
 
 const SectionTitle = ({title}:Props) => {
   return (
-    <h2 className='font-bodyFont text-2xl font-semibold flex items-center'>{title}
-        <span className='hidden md:inline-flex md:w-60 lgl:w-72 h-[.5px] bg-blue-900 ml-6'></span>
-    </h2>
+    <div className="flex flex-col items-center justify-center mb-12">
+        <h2 className='font-bodyFont text-4xl font-extrabold text-blue-900 tracking-wide text-center relative inline-block'>
+            {title}
+            <span className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1.5 bg-textGreen rounded-full"></span>
+        </h2>
+    </div>
   )
 }
 

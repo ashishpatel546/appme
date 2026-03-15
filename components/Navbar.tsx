@@ -1,5 +1,3 @@
-import { logo } from '@/public/assets'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRef, useState } from 'react'
 import {MdOutlineSegment,MdClose} from 'react-icons/md'
@@ -11,27 +9,21 @@ export const Navbar = () => {
 
    const [showMenu,setShowMenu]= useState(false);
 
-   // const handleScroll =(event: React.MouseEvent<HTMLAnchorElement,MouseEvent>) => {
-   //    event.preventDefault();
-
-   //    setShowMenu(false);
-      
-   // }
-
    function handleClick(event:any){
       if(event.target.contains(ref.current)){
-
          setShowMenu(false);
-
       }
    }
 
   return (
-    <div className='w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-slate-200 px-4'>
+    <div className='w-full shadow-md h-16 lg:h-20 sticky top-0 z-50 bg-white px-4 transition-all duration-300'>
      <div className='max-w-container h-full mx-auto py-1 font-bodyFont flex items-center justify-between'>
-        <div>
-            <Image className='w-20' src={logo} alt="logo" />
-        </div>
+        <Link href="/">
+            <div className="text-3xl font-extrabold text-blue-900 tracking-tighter cursor-pointer flex items-center gap-1 hover:scale-105 transition-transform">
+               <div className="w-8 h-8 bg-blue-900 text-white rounded-lg flex items-center justify-center text-xl shadow-lg">A</div>
+               pp<span className="text-green-600">Me</span>
+            </div>
+        </Link>
          <div className=' hidden mdl:inline-flex items-center gap-6'>
             <ul className='flex text-30px gap-8'>
                 <Link href="/"  className='flex items-center gap-2 font-medium text-sky-800

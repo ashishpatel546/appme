@@ -21,63 +21,44 @@ const services = () => {
 
       <section id='services' className='max-w-contentContainer mx-auto lgl:px-12 py-20 text-black'>
         <SectionTitle title='Services' />
-
-        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 text-white'>
-           <ServiceCard title='Cloud Solution'
-                        des='Lift and Shift quick migration Rearchitected Cloud Implementations Micro Service based Implementations.'
-                        link='' />
-            <ServiceCard title='DevOps'
-                        des='Our certified DevOps engineers and SREs have expertise in:
-                        -CI/CD implementations
-                        -Terraform(IaC)
-                        -Kubernetes implementations'
-                        link='' />
-            <ServiceCard title='Cyber Security Services'
-                        des='We provide End To End Cyber Security Solutions to our customer'
-                        link='' />
-            <ServiceCard title='Development & Testing'
-                        des='Java, C, C++, Angular JS, Python, .net, Mobility (Andriod, IoS) Automation (Selenium, QTP etc.), Non-functional (Performance, Security etc.)'
-                        link='' />
-            <ServiceCard title='Data Analytic, Machine Learning & IOT'
-                        des='Hadoop, ETL, R, Python, Spark, Kafka, Flume, RaspBerry-Visualization: Qlik, Tableau, cognos etc.'
-                        link='' />
-            <ServiceCard title='ERP'
-                        des='SAP,
-                        Oracle,
-                        Salesforce'
-                        link='' />
-
-            {
-                showMore && (
-                    <>
-                    <ServiceCard title='JavaSript'
-                        des='We provide End To End Cyber Security Solutions to our customer'
-                        link='' />
-                    <ServiceCard title='ML'
-                        des='lorem10jvbjfbifhuffkndokfkojffoigj'
-                        link='' />
-                    <ServiceCard title='test'
-                        des='dejfnrnofrgrmrefoifjreitgjtrmgkgmkofgrjgi,
-                        tkgjtgji'
-                        link='' />
-             
-                    </>
-                )
-            }
-
+        
+        {/* Aggressive Cologeos Promotion */}
+        <div className='mt-8 mb-16 p-8 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-900 text-white shadow-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-shadow duration-300'>
+            <div className='flex flex-col md:flex-row items-center gap-8'>
+                <div className='flex-1'>
+                    <h2 className='text-3xl font-bold mb-4 text-textGreen'>Cologeos</h2>
+                    <h3 className='text-xl mb-4 font-semibold'>The Ultimate School Management System</h3>
+                    <p className='text-gray-200 mb-6 leading-relaxed'>
+                        Experience the next generation of educational administration. Cologeos streamlines everything from attendance and fee management to online examinations and parent-teacher communication in one powerful, easy-to-use platform.
+                    </p>
+                    <a href="https://cologeos.in" target="_blank" rel="noopener noreferrer">
+                        <button className='bg-textGreen text-blue-900 font-bold py-3 px-8 rounded hover:bg-white hover:text-blue-900 transition-colors duration-300'>
+                            Explore Cologeos
+                        </button>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div className='mt-12 flex items-center justify-center'>
-            {
-                showMore ? <button 
-                onClick={()=>setShowMore(false)}
-                className='w-36 h-12 rounded-md text-slate-500 text-[13px] border border-black 
-                hover:bg-hoverColor duration-300'>Show Less</button> 
-                    :
-                <button 
-                onClick={()=>setShowMore(true)}
-                className='w-36 h-12 rounded-md text-textGreen text-[13px] border border-black 
-                hover:bg-hoverColor duration-300'>Show More</button>
-            }
+
+        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-10'>
+           <ServiceCard title='Product Development'
+                        des='We build robust, scalable, and intuitive software products from ideation to launch. Our comprehensive product development lifecycle ensures that your vision becomes a market-ready reality.'
+                        link='#' />
+            <ServiceCard title='IT Consultancies'
+                        des='Strategic technology guidance to align your IT infrastructure with business goals. We provide expert advice on digital transformation, architecture, and technology adoption.'
+                        link='#' />
+            <ServiceCard title='Cloud Solutions'
+                        des='Seamless cloud migration, re-architecture, and management. We specialize in developing microservice-based applications tailored for high availability and scalability.'
+                        link='#' />
+            <ServiceCard title='DevOps Engineering'
+                        des='Streamline your software delivery with CI/CD implementations, Infrastructure as Code (Terraform), and robust Kubernetes orchestration, ensuring rapid and reliable deployments.'
+                        link='#' />
+            <ServiceCard title='Cyber Security Services'
+                        des='Protect your digital assets with our comprehensive, end-to-end cybersecurity solutions. We implement rigorous security protocols to safeguard your data against modern threats.'
+                        link='#' />
+            <ServiceCard title='Data Analytics & AI/ML'
+                        des='Transform your data into actionable insights. We leverage Hadoop, Spark, Python, and modern machine learning algorithms to build intelligent, predictive systems.'
+                        link='#' />
         </div>
     </section>
 
