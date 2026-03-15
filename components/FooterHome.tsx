@@ -48,7 +48,7 @@ const FooterHome = () => {
                     </a>
                 </div>
                 <p className='text-blue-100'>Email: <a href="mailto:info@appme.in" className="hover:text-green-400">info@appme.in</a></p>
-                <p className='text-blue-100 mt-2'>Phone: +91 9716160389</p>
+                <p className='text-blue-100 mt-2'>Phone: +91 8005004357</p>
             </div>
         </div>
         
