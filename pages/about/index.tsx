@@ -61,7 +61,7 @@ const about = () => {
           <div className='w-full lgl:w-1/2 text-gray-800 font-medium flex flex-col gap-6 text-lg'>
               <h3 className="text-3xl font-bold text-blue-900">Our Mission</h3>
               <p className="leading-relaxed">
-                  Our flagship product, Cologeos, is a testament to our dedication to transforming the educational landscape with robust, intuitive school management solutions. 
+                  Our flagship product, Colegios, is a testament to our dedication to transforming the educational landscape with robust, intuitive school management solutions. 
               </p>
               <p className="leading-relaxed">
                   Whether it&apos;s architecting cloud infrastructure, deploying AI-driven systems, or building scalable web applications, our team delivers excellence at every step.

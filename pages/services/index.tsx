@@ -26,18 +26,18 @@ const services = () => {
       <section id='services' className='max-w-contentContainer mx-auto lgl:px-12 py-20 text-black'>
         <SectionTitle title='Services' isMain />
         
-        {/* Aggressive Cologeos Promotion */}
+        {/* Aggressive Colegios Promotion */}
         <div className='mt-8 mb-16 p-8 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-900 text-white shadow-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-shadow duration-300'>
             <div className='flex flex-col md:flex-row items-center gap-8'>
                 <div className='flex-1'>
-                    <h2 className='text-3xl font-bold mb-4 text-textGreen'>Cologeos</h2>
+                    <h2 className='text-3xl font-bold mb-4 text-textGreen'>Colegios</h2>
                     <h3 className='text-xl mb-4 font-semibold'>The Ultimate School Management System</h3>
                     <p className='text-gray-200 mb-6 leading-relaxed'>
-                        Experience the next generation of educational administration. Cologeos streamlines everything from attendance and fee management to online examinations and parent-teacher communication in one powerful, easy-to-use platform.
+                        Experience the next generation of educational administration. Colegios streamlines everything from attendance and fee management to online examinations and parent-teacher communication in one powerful, easy-to-use platform.
                     </p>
-                    <a href="https://cologeos.in" target="_blank" rel="noopener noreferrer">
+                    <a href="https://colegios.in/" target="_blank" rel="noopener noreferrer">
                         <button className='bg-textGreen text-blue-900 font-bold py-3 px-8 rounded hover:bg-white hover:text-blue-900 transition-colors duration-300'>
-                            Explore Cologeos
+                            Explore Colegios
                         </button>
                     </a>
                 </div>

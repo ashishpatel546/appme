@@ -39,7 +39,7 @@ const Banner = () => {
             <div className='pt-6'></div>
             <p className='text-gray-200 text-base sm:text-lg max-w-2xl leading-relaxed mb-8'>
               Empowering businesses with cutting-edge technology solutions. From advanced cloud infrastructure to 
-              comprehensive school management systems like Cologeos, we deliver innovation that drives real results.
+              comprehensive school management systems like Colegios, we deliver innovation that drives real results.
             </p>
 
             <div className='pt-4'>

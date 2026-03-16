@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Cologeos = () => {
+const Colegios = () => {
   return (
     <section className="relative w-full py-20 bg-cover bg-center text-white" style={{ backgroundImage: "url('/assets/images/backgrounds/cologeos-bg.jpg')" }}>
       {/* Overlay */}
@@ -9,15 +9,15 @@ const Cologeos = () => {
 
       <div className="relative container mx-auto px-4 z-10 flex flex-col md:flex-row items-center gap-12">
         <div className="flex-1 text-center md:text-left">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Cologeos - School Management System</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Colegios - School Management System</h2>
           <p className="text-lg md:text-xl mb-8 opacity-90 leading-relaxed">
             Revolutionize your educational institution with our comprehensive school management solution. 
-            Cologeos brings administrators, teachers, students, and parents together on a single, powerful platform. 
+            Colegios brings administrators, teachers, students, and parents together on a single, powerful platform. 
             Manage attendance, exams, fees, and more with ease.
           </p>
-          <a href="https://cologeos.in" target="_blank" rel="noopener noreferrer">
+          <a href="https://colegios.in/" target="_blank" rel="noopener noreferrer">
             <button className="px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-white text-blue-900 font-bold rounded-lg shadow-lg hover:bg-slate-200 transition-all hover:-translate-y-1 hover:shadow-xl duration-300">
-              Visit Cologeos Website
+              Visit Colegios Website
             </button>
           </a>
         </div>
@@ -49,4 +49,4 @@ const Cologeos = () => {
   )
 }
 
-export default Cologeos
+export default Colegios

@@ -43,7 +43,7 @@ const Contact = () => {
     <>
     <SEO 
       title="Contact Us - AppMe Pvt Ltd." 
-      description="Get in touch with AppMe for technology solutions, consulting services, or inquiries about the Cologeos school management system."
+      description="Get in touch with AppMe for technology solutions, consulting services, or inquiries about the Colegios school management system."
       ogUrl="https://appme.in/contact"
     />
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
@@ -62,7 +62,7 @@ const Contact = () => {
               <h2 className="pt-8 font-bold italic mb-6 text-[16px] uppercase sm:text-[16px] lg:text-[26px] 
                     xl:text-[ 16px] text-blue-900"> GET IN TOUCH WITH US </h2>
               <p className=" mb-9 text-base leading-relaxed text-gray-700">
-                We&apos;d love to hear from you! Whether you have a question about our services, need support for Cologeos, or want to explore partnership opportunities, our team is ready to answer all your questions.
+                We&apos;d love to hear from you! Whether you have a question about our services, need support for Colegios, or want to explore partnership opportunities, our team is ready to answer all your questions.
               </p>
 
               <div className="mb-8 flex w-full max-w-[370px]">
