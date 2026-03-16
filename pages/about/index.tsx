@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import {AiFillThunderbolt} from 'react-icons/ai'
 import Image from 'next/image'
 import { tech3 } from '@/public/assets'
@@ -9,13 +8,16 @@ import { LeftSide } from '@/components/LeftSide'
 import { RightSide } from '@/components/RightSide'
 import Footer from '@/components/Footer'
 import Journey from '@/components/Journey'
+import SEO from '@/components/SEO'
 
 const about = () => {
   return (
     <>
-    <Head>
-      <title>About AppMe</title>
-    </Head>
+    <SEO 
+      title="About Us - AppMe Pvt Ltd." 
+      description="Learn about AppMe's journey from a service provider to a product-driven enterprise building high-performance products and delivering consulting services globally."
+      ogUrl="https://appme.in/about"
+    />
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
       <Navbar />
 
@@ -25,7 +27,7 @@ const about = () => {
 
     <section id='about' className='max-w-contentContainer mx-auto px-4 lgl:px-12 py-20 flex flex-col gap-16'>
 
-      <SectionTitle title='About AppMe'/>
+      <SectionTitle title='About AppMe' isMain />
 
       {/* Our Story Section */}
       <div className='flex flex-col lgl:flex-row gap-16 items-center'>

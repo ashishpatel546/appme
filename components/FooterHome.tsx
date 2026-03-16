@@ -1,4 +1,3 @@
-import { logo, logo1 } from '@/public/assets'
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'

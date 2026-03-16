@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
 import { CiLocationOn } from 'react-icons/ci'
 import { FiPhone } from 'react-icons/fi'
 import { AiOutlineMail } from 'react-icons/ai'
@@ -10,6 +9,8 @@ import { Navbar } from '@/components/Navbar'
 import { RightSide } from '@/components/RightSide'
 import { LeftSide } from '@/components/LeftSide'
 import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -40,9 +41,11 @@ const Contact = () => {
 
   return (
     <>
-    <Head>
-      <title>Contact AppMe</title>
-    </Head>
+    <SEO 
+      title="Contact Us - AppMe Pvt Ltd." 
+      description="Get in touch with AppMe for technology solutions, consulting services, or inquiries about the Cologeos school management system."
+      ogUrl="https://appme.in/contact"
+    />
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
       <Navbar />
 
@@ -51,7 +54,7 @@ const Contact = () => {
       </div>
       <section id='contactUs' className='max-w-contentContainer mx-auto px-4 sm:px-8 lgl:px-12 py-20'>
 
-        <SectionTitle title='Contact Us' />
+        <SectionTitle title='Contact Us' isMain />
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8'>
           <div className="container mx-auto flex flex-col lgl:flex-row flex-wrap lg:justify-between ">

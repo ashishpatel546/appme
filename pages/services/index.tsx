@@ -1,5 +1,4 @@
 import React from 'react'
-import Head from 'next/head'
 import { Navbar } from '@/components/Navbar'
 import SectionTitle from '@/components/SectionTitle'
 import ServiceCard from '@/components/ServiceCard'
@@ -7,13 +6,16 @@ import { LeftSide } from '@/components/LeftSide'
 import { RightSide } from '@/components/RightSide'
 import Footer from '@/components/Footer'
 import servicesData from '@/public/data/services.json'
+import SEO from '@/components/SEO'
 
 const services = () => {
   return (
     <>
-    <Head>
-      <title>Services - AppMe</title>
-    </Head>
+    <SEO 
+      title="Our Services - AppMe Pvt Ltd." 
+      description="Explore our wide range of services including cloud architecture, DevOps, machine learning, data analytics, modern JS frameworks, and cyber security."
+      ogUrl="https://appme.in/services"
+    />
     <main className="w-full h-screen font-bodyFont bg-slate-100 text-black overflow-x-hidden overflow-y-scroll">
       <Navbar />
 
@@ -22,7 +24,7 @@ const services = () => {
       </div>
 
       <section id='services' className='max-w-contentContainer mx-auto lgl:px-12 py-20 text-black'>
-        <SectionTitle title='Services' />
+        <SectionTitle title='Services' isMain />
         
         {/* Aggressive Cologeos Promotion */}
         <div className='mt-8 mb-16 p-8 rounded-2xl bg-gradient-to-r from-blue-900 to-indigo-900 text-white shadow-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-shadow duration-300'>

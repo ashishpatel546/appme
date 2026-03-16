@@ -14,7 +14,7 @@ const Banner = () => {
       
       <div className='relative container mx-auto flex flex-col lgl:flex-row z-10'>
         <div className='basis-1/2 w-full lgl:w-2/3 py-2 text-white'>
-          <span className='text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white mb-4 block drop-shadow-md'>AppMe Pvt Ltd.</span>
+          <h1 className='text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white mb-4 block drop-shadow-md'>AppMe Pvt Ltd.</h1>
           
           <div className='pt-1'> </div>
           <p className='text-blue-200 font-semibold text-lg sm:text-xl md:text-2xl max-w-2xl leading-relaxed italic border-l-4 border-blue-400 pl-4 mb-6'>
@@ -55,7 +55,7 @@ const Banner = () => {
         </div>
       <div className='basis-1/2 px-0 py-0 w-full lgl:w-1/3 hidden lgl:flex justify-center items-center'>
         <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-105 duration-500 border-4 border-white/20">
-          <Image src={tech3} alt='tech' fill style={{ objectFit: "cover" }} className="hover:scale-110 transition-transform duration-700"/>
+          <Image src={tech3} alt='Technology and Innovation at AppMe' fill style={{ objectFit: "cover" }} className="hover:scale-110 transition-transform duration-700"/>
         </div>
       </div>   
     </div>

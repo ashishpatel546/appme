@@ -4,15 +4,16 @@ import FooterHome from "@/components/FooterHome";
 import { Navbar } from "@/components/Navbar";
 import Cologeos from "@/components/Cologeos";
 import Products from "@/components/Products";
-
-import Head from "next/head";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   return (
     <>
-    <Head>
-      <title>AppMe Pvt Ltd.</title>
-    </Head>
+    <SEO 
+      title="AppMe Pvt Ltd. - Innovative Tech Solutions & Software Development" 
+      description="AppMe Pvt Ltd is a dynamic, product-driven enterprise that thrives on innovation, providing state-of-the-art technological solutions, consulting services, and the Cologeos school management system."
+      ogUrl="https://appme.in"
+    />
     <main>
       <Navbar />
 
