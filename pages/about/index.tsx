@@ -14,7 +14,7 @@ const about = () => {
   return (
     <>
     <SEO 
-      title="About Us - AppMe Pvt Ltd." 
+      title="About Us - AppMe Soft Pvt Ltd." 
       description="Learn about AppMe's journey from a service provider to a product-driven enterprise building high-performance products and delivering consulting services globally."
       ogUrl="https://appme.in/about"
     />
@@ -48,7 +48,7 @@ const about = () => {
           <div className='w-full lgl:w-1/2 text-gray-800 font-medium flex flex-col gap-6 text-lg'>
               <h3 className="text-3xl font-bold text-blue-900">Our Story</h3>
               <p className="leading-relaxed">
-                  At AppMe Pvt Ltd, we are driven by a passion for technology and a commitment to solving complex business challenges. Since our inception, we have evolved from a traditional service provider into a dynamic, product-driven enterprise that thrives on innovation.
+                  At AppMe Soft Pvt Ltd, we are driven by a passion for technology and a commitment to solving complex business challenges. Since our inception, we have evolved from a traditional service provider into a dynamic, product-driven enterprise that thrives on innovation.
               </p>
               <p className="leading-relaxed">
                   We started with a vision to empower organizations by building state-of-the-art technological solutions. Today, we stand as a beacon of progress, delivering high-performance products and uncompromised consulting services globally.

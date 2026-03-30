@@ -14,11 +14,11 @@ const Banner = () => {
       
       <div className='relative container mx-auto flex flex-col lgl:flex-row z-10'>
         <div className='basis-1/2 w-full lgl:w-2/3 py-2 text-white'>
-          <h1 className='text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white mb-4 block drop-shadow-md'>AppMe Pvt Ltd.</h1>
+          <h1 className='text-4xl sm:text-5xl md:text-7xl font-black tracking-tight text-white mb-4 block drop-shadow-md'>AppMe Soft Pvt Ltd.</h1>
           
           <div className='pt-1'> </div>
           <p className='text-blue-200 font-semibold text-lg sm:text-xl md:text-2xl max-w-2xl leading-relaxed italic border-l-4 border-blue-400 pl-4 mb-6'>
-            Previously Sologence Technologies Pvt Ltd. Now more energetic, more enthusiastic, with broader team and innovation we are AppMe Pvt Ltd.
+            Previously Sologence Technologies Pvt Ltd. Now more energetic, more enthusiastic, with broader team and innovation we are AppMe Soft Pvt Ltd.
           </p>
             
             <div className='pt-4'></div>

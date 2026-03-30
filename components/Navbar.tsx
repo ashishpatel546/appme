@@ -41,8 +41,10 @@ export const Navbar = () => {
                      <li key={item.path}>
                         <Link 
                            href={item.path} 
-                           className={`relative flex items-center gap-2 font-medium cursor-pointer transition-colors duration-300 group ${
-                              isActive ? 'text-textGreen' : 'text-sky-800 hover:text-textGreen'
+                           className={`relative flex items-center gap-2 font-medium cursor-pointer transition-all duration-300 group ${
+                              isActive
+                                ? 'text-blue-900 bg-blue-50 px-3 py-1 rounded-md'
+                                : 'text-sky-800 hover:text-textGreen'
                            }`}
                         >
                            {item.title}

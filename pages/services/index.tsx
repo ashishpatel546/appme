@@ -12,7 +12,7 @@ const services = () => {
   return (
     <>
     <SEO 
-      title="Our Services - AppMe Pvt Ltd." 
+      title="Our Services - AppMe Soft Pvt Ltd." 
       description="Explore our wide range of services including cloud architecture, DevOps, machine learning, data analytics, modern JS frameworks, and cyber security."
       ogUrl="https://appme.in/services"
     />

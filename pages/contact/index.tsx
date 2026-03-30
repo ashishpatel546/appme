@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <>
     <SEO 
-      title="Contact Us - AppMe Pvt Ltd." 
+      title="Contact Us - AppMe Soft Pvt Ltd." 
       description="Get in touch with AppMe for technology solutions, consulting services, or inquiries about the Colegios school management system."
       ogUrl="https://appme.in/contact"
     />

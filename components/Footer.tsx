@@ -15,7 +15,7 @@ const Footer = () => {
                     pp<span className="text-green-400">Me</span>
                 </div>
                 <p className='text-blue-100 text-center md:text-left leading-relaxed max-w-sm'>
-                    AppMe Pvt Ltd is a dynamic, product-driven enterprise specializing in School Management Systems, Cloud Solutions, and AI/ML technologies.
+                    AppMe Soft Pvt Ltd is a dynamic, product-driven enterprise specializing in School Management Systems, Cloud Solutions, and AI/ML technologies.
                 </p>
             </div>
             
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
         
         <div className='mt-16 pt-8 border-t border-blue-800 text-center text-blue-200'>
-            <p>&copy; {new Date().getFullYear()} AppMe Pvt Ltd. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} AppMe Soft Pvt Ltd. All rights reserved.</p>
         </div>
     </div>
    </footer>
