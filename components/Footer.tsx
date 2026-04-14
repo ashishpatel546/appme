@@ -46,7 +46,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <p className='text-blue-100'>Email: <a href="mailto:info@appme.in" className="hover:text-green-400">info@appme.in</a></p>
-                <p className='text-blue-100 mt-2'>Phone: +91 8005004357</p>
+                <p className='text-blue-100 mt-2'>Phone: +91-7838160389, +91-9654047009</p>
             </div>
         </div>
         

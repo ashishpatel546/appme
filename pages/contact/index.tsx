@@ -27,7 +27,7 @@ const Contact = () => {
     e.preventDefault()
     
     // WhatsApp number with country code
-    const phoneNumber = '918005004357'
+    const phoneNumber = '917838160389'
     
     // Construct the message
     const message = `Hello,\n\nI am reaching out via your website contact form:\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n\n*Message:*\n${formData.message}`
@@ -81,7 +81,7 @@ const Contact = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-dark mb-1 text-xl font-semibold">Phone Number</h4>
-                  <p className="text-zinc-800">8005004357, 9654047009</p>
+                  <p className="text-zinc-800">+91-7838160389, +91-9654047009</p>
                 </div>
               </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
                 </div>
                 <div className="w-full">
                   <h4 className="text-dark mb-1 text-xl font-semibold">WhatsApp</h4>
-                  <a href="https://wa.me/918005004357" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 mt-2 text-base font-medium text-white transition-all duration-200 bg-green-500 border border-transparent rounded-full shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                  <a href="https://wa.me/917838160389" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 mt-2 text-base font-medium text-white transition-all duration-200 bg-green-500 border border-transparent rounded-full shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                     Click to chat with us
                   </a>
                 </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                 <h4 className="text-dark mb-4 text-xl font-semibold">Scan to Chat on WhatsApp</h4>
                 <div className="bg-white p-4 rounded-lg shadow-md inline-block w-fit">
                   <QRCode 
-                    value="https://wa.me/918005004357" 
+                    value="https://wa.me/917838160389" 
                     size={150}
                     level="H"
                   />
