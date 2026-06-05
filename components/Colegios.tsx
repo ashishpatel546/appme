@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { FaClipboardCheck, FaMoneyBillWave, FaComments, FaBook, FaQrcode, FaFingerprint, FaTasks, FaChartBar } from 'react-icons/fa'
 
 const Colegios = () => {
   return (
@@ -26,20 +27,52 @@ const Colegios = () => {
           <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl shadow-2xl transition-transform hover:scale-105 duration-500">
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center font-bold">✓</span>
-                <span className="text-lg">Smart Attendance Tracking</span>
+                <span className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaClipboardCheck />
+                </span>
+                <span className="text-lg">Live Attendance Tracking</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center font-bold">✓</span>
+                <span className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaMoneyBillWave />
+                </span>
                 <span className="text-lg">Fee & Finance Management</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center font-bold">✓</span>
-                <span className="text-lg">Online Examination System</span>
+                <span className="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaComments />
+                </span>
+                <span className="text-lg">Parent-Teacher Communication</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center font-bold">✓</span>
-                <span className="text-lg">Parent-Teacher Communication</span>
+                <span className="w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaBook />
+                </span>
+                <span className="text-lg">Library Management</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaQrcode />
+                </span>
+                <span className="text-lg">Security QR Authentication</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-teal-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaFingerprint />
+                </span>
+                <span className="text-lg">Staff HR & Biometric Attendance Portal</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaTasks />
+                </span>
+                <span className="text-lg">Homework Management</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="w-8 h-8 rounded-full bg-fuchsia-500 flex items-center justify-center text-white shrink-0 shadow-lg">
+                  <FaChartBar />
+                </span>
+                <span className="text-lg">Comprehensive Reports</span>
               </li>
             </ul>
           </div>
