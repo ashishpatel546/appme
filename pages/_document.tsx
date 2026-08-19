@@ -6,11 +6,9 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet"/>
+        <meta name="theme-color" content="#0B1220" />
       </Head>
-      <body>
+      <body className="bg-surface text-ink">
         <Main />
         <NextScript />
       </body>

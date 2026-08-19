@@ -1,31 +1,36 @@
-import Banner from "@/components/Banner";
-import Expertise from "@/components/Expertise";
-import FooterHome from "@/components/FooterHome";
-import { Navbar } from "@/components/Navbar";
-import Colegios from "@/components/Colegios";
-import Products from "@/components/Products";
-import SEO from "@/components/SEO";
+import { Navbar } from '@/components/Navbar'
+import Hero from '@/components/Hero'
+import TechMarquee from '@/components/TechMarquee'
+import Expertise from '@/components/Expertise'
+import Products from '@/components/Products'
+import Colegios from '@/components/Colegios'
+import Process from '@/components/Process'
+import CTABand from '@/components/CTABand'
+import Footer from '@/components/Footer'
+import SEO from '@/components/SEO'
 
 export default function Home() {
   return (
     <>
-    <SEO 
-      title="AppMe Soft Pvt Ltd. - Innovative Tech Solutions & Software Development" 
-      description="AppMe Soft Pvt Ltd is a dynamic, product-driven enterprise that thrives on innovation, providing state-of-the-art technological solutions, consulting services, and the Colegios school management system."
-      ogUrl="https://appme.in"
-    />
-    <main>
+      <SEO
+        title="AppMe Soft Pvt Ltd — Software products, cloud and AI engineering"
+        description="AppMe Soft Pvt Ltd is a product-driven software company in Delhi. We build Colegios school management, AI and automation products, an upcoming one-stop EV charging platform, plus cloud and data engineering — and run them after launch."
+        ogUrl="https://appme.in"
+      />
+
       <Navbar />
 
-      <div>
-        <Banner />
+      <main id="main">
+        <Hero />
+        <TechMarquee />
         <Expertise />
-        <Products />
         <Colegios />
-        <FooterHome />
-      </div>    
-    </main>
+        <Products />
+        <Process />
+        <CTABand />
+      </main>
 
+      <Footer />
     </>
   )
 }

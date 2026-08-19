@@ -1,44 +1,152 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { FiArrowUpRight } from 'react-icons/fi'
+import { MdEvStation } from 'react-icons/md'
 import SectionTitle from './SectionTitle'
+import Reveal from './Reveal'
 import productsData from '@/public/data/products.json'
+
+const accentCycle = ['brand-blue', 'brand-green', 'brand-saffron'] as const
+
+const badge: Record<(typeof accentCycle)[number], string> = {
+  'brand-blue': 'bg-brand-blue/10 text-brand-blue',
+  'brand-green': 'bg-brand-green/10 text-brand-green-dark',
+  'brand-saffron': 'bg-brand-saffron/10 text-brand-saffron-dark',
+}
+
+const hoverText: Record<(typeof accentCycle)[number], string> = {
+  'brand-blue': 'group-hover:text-brand-blue',
+  'brand-green': 'group-hover:text-brand-green-dark',
+  'brand-saffron': 'group-hover:text-brand-saffron-dark',
+}
+
+const live = productsData.filter((item) => item.status !== 'pipeline')
+const pipeline = productsData.filter((item) => item.status === 'pipeline')
 
 const Products = () => {
   return (
-    <section className='container mx-auto py-16 px-4'>
-        <SectionTitle title='Our Products' />
-        
-        <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 mt-12'>
-            {productsData.map((item) => (
-                <div key={item.id} className='w-full rounded-2xl bg-white border border-gray-200 shadow-md flex flex-col 
-                hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group h-full'>
-                    
-                    <div className="w-full h-56 relative overflow-hidden">
-                        <Image 
-                            src={item.image} 
-                            alt={item.title} 
-                            fill 
-                            style={{ objectFit: "cover" }} 
-                            className="group-hover:scale-110 transition-transform duration-500"
-                        />
-                    </div>
-                    
-                    <div className="p-8 flex-1 flex flex-col z-10 bg-white">
-                        <h2 className='text-2xl font-bold text-gray-800 mb-4 group-hover:text-blue-700 transition-colors duration-300'>{item.title}</h2>
-                        <p className='text-base text-gray-600 leading-relaxed mb-6 flex-grow'>
-                            {item.description}
-                        </p>
-                        <Link href="/contact" className="w-full py-3 px-6 bg-blue-900 text-white text-center font-semibold rounded-lg hover:bg-blue-800 transition-colors duration-300 mt-auto">
-                            Get in touch
-                        </Link>
-                    </div>
-                    
-                    {/* Bottom accent line */}
-                    <div className="absolute bottom-0 left-0 w-0 h-1 bg-blue-600 group-hover:w-full transition-all duration-500"></div>
-                </div>
-            ))}
+    <section id="products" className="section-y bg-white">
+      <div className="container-x">
+        <div className="flex flex-col gap-8 lgl:flex-row lgl:items-end lgl:justify-between">
+          <SectionTitle
+            align="left"
+            eyebrow="What we've built"
+            title="Our product line"
+            subtitle="Software we designed, shipped and still maintain — across schools, marketing, documents and travel. Below them is what the workshop is building next."
+            className="lgl:max-w-2xl"
+          />
+          <Reveal delay={120}>
+            <Link href="/contact" className="btn-ghost shrink-0">
+              Ask for a walkthrough
+              <FiArrowUpRight />
+            </Link>
+          </Reveal>
         </div>
+
+        <div className="mt-14 grid gap-6 mdl:grid-cols-2 xl:grid-cols-3 xl:gap-7">
+          {live.map((item, i) => {
+            const accent = accentCycle[i % accentCycle.length]
+            return (
+              <Reveal key={item.id} delay={(i % 3) * 100} className="h-full">
+                <article className="card card-stripe group flex h-full flex-col">
+                  <div className="relative h-52 w-full overflow-hidden">
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-[900ms] ease-out-expo group-hover:scale-[1.08]"
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/5 to-transparent"
+                      aria-hidden="true"
+                    />
+                    <span
+                      className={`absolute left-4 top-4 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] backdrop-blur ${badge[accent]}`}
+                    >
+                      Live
+                    </span>
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-6 mdl:p-7">
+                    <h3
+                      className={`font-display text-xl font-bold text-ink transition-colors duration-300 ${hoverText[accent]}`}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="mt-3.5 flex-1 text-[15px] leading-relaxed text-ink/60">
+                      {item.description}
+                    </p>
+
+                    <Link
+                      href="/contact"
+                      className="mt-6 inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full border border-ink/12 px-5 text-[14.5px] font-semibold text-ink transition-all duration-300 ease-out-expo hover:border-transparent hover:bg-ink hover:text-white"
+                    >
+                      Talk to us about this
+                      <FiArrowUpRight />
+                    </Link>
+                  </div>
+                </article>
+              </Reveal>
+            )
+          })}
+        </div>
+
+        {/* In the workshop — products under active development */}
+        {pipeline.map((item) => (
+          <Reveal key={item.id} delay={100}>
+            <article className="card mt-6 flex flex-col overflow-hidden mdl:mt-7 lgl:flex-row">
+              <div className="relative grid shrink-0 place-items-center bg-brand-gradient-ev p-10 lgl:w-[38%]">
+                <div
+                  className="pointer-events-none absolute inset-0 bg-dots opacity-70"
+                  aria-hidden="true"
+                />
+                <div className="relative flex flex-col items-center gap-4 text-white">
+                  <span className="grid h-20 w-20 place-items-center rounded-3xl bg-white/15 ring-1 ring-white/25 backdrop-blur">
+                    <MdEvStation size={40} />
+                  </span>
+                  <span className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-white/85">
+                    Charging infrastructure
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-1 flex-col justify-center p-7 mdl:p-9">
+                <div className="flex flex-wrap items-center gap-3">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-brand-saffron/30 bg-brand-saffron/12 px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] text-brand-saffron-dark">
+                    <span className="relative grid h-1.5 w-1.5 place-items-center" aria-hidden="true">
+                      <span className="absolute h-1.5 w-1.5 animate-pulse-ring rounded-full bg-brand-saffron" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand-saffron" />
+                    </span>
+                    In development
+                  </span>
+                  <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-ink/45">
+                    Next release
+                  </span>
+                </div>
+
+                <h3 className="mt-4 font-display text-2xl font-bold text-ink mdl:text-[27px]">
+                  {item.title}
+                </h3>
+                <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-ink/65">
+                  {item.description}
+                </p>
+
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <Link href="/contact" className="btn-primary group w-full sm:w-auto">
+                    Join the early list
+                    <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
+                  <Link href="/services" className="btn-ghost w-full sm:w-auto">
+                    See how we build
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </Reveal>
+        ))}
+      </div>
     </section>
   )
 }
