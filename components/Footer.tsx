@@ -141,9 +141,14 @@ const Footer = () => {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-7 text-sm text-white/75 mdl:flex-row">
           <p>© {new Date().getFullYear()} AppMe Soft Private Limited. All rights reserved.</p>
-          <p className="font-mono text-[11px] uppercase tracking-[0.2em]">
-            Formerly Sologence Technologies
-          </p>
+          <div className="flex flex-col items-center gap-4 sml:flex-row sml:gap-6">
+            <Link href="/privacy" className="transition-colors duration-300 hover:text-white">
+              Privacy Policy
+            </Link>
+            <p className="font-mono text-[11px] uppercase tracking-[0.2em]">
+              Formerly Sologence Technologies
+            </p>
+          </div>
         </div>
       </div>
     </footer>
