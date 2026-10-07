@@ -86,7 +86,7 @@ const Footer = () => {
               Flagship product
             </h3>
             <a
-              href="https://colegios.in/"
+              href="https://www.colegios.in/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 block rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.07]"

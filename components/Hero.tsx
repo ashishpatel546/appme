@@ -124,7 +124,7 @@ const Hero = () => {
                 <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <a
-                href="https://colegios.in/"
+                href="https://www.colegios.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-ghost w-full sm:w-auto"

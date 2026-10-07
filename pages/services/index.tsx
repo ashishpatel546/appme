@@ -116,7 +116,7 @@ const Services = () => {
 
                     <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                       <a
-                        href="https://colegios.in/"
+                        href="https://www.colegios.in/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-white group w-full sm:w-auto"
