@@ -55,14 +55,14 @@ const Expertise = () => {
                       alt=""
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-[900ms] ease-out-expo group-hover:scale-[1.08]"
+                      className="object-cover transition-transform duration-900 ease-out-expo group-hover:scale-[1.08]"
                     />
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t ${a.tint} via-transparent to-transparent opacity-70 mix-blend-multiply`}
+                      className={`absolute inset-0 bg-linear-to-t ${a.tint} via-transparent to-transparent opacity-70 mix-blend-multiply`}
                       aria-hidden="true"
                     />
                     <span
-                      className={`absolute left-4 top-4 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.18em] backdrop-blur ${a.chip}`}
+                      className={`absolute left-4 top-4 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.18em] backdrop-blur-sm ${a.chip}`}
                     >
                       0{i + 1}
                     </span>

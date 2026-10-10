@@ -52,7 +52,7 @@ const Process = () => {
         <SectionTitle
           eyebrow="How an engagement runs"
           title="Four steps, no surprises"
-          subtitle="The same sequence whether you're a 400-student school or a company migrating a decade of infrastructure."
+          subtitle="The same four steps we used to build ChargeVeta and Colegios, and the ones we follow on your project."
         />
 
         <ol className="relative mt-14 grid gap-6 mdl:grid-cols-2 xl:grid-cols-4 xl:gap-5">

@@ -40,8 +40,8 @@ const channels = [
 ]
 
 const topics = [
+  'ChargeVeta for my chargers or fleet',
   'Colegios for my school',
-  'EV charging platform',
   'A new product build',
   'Cloud or DevOps help',
   'Something else',
@@ -90,7 +90,7 @@ ${formData.message}`
     <>
       <SEO
         title="Contact Us — AppMe Soft Pvt Ltd."
-        description="Talk to AppMe Soft about Colegios school management, product development, cloud and AI engineering. Call, email or send us a message on WhatsApp."
+        description="Talk to AppMe Soft about ChargeVeta EV charging, Colegios school management, product development, cloud and AI engineering. Call, email or send us a message on WhatsApp."
         ogUrl="https://appme.in/contact"
       />
 

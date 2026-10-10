@@ -9,11 +9,15 @@ import {
   FaFingerprint,
   FaTasks,
   FaChartBar,
+  FaRobot,
+  FaMagic,
 } from 'react-icons/fa'
 import { FiArrowUpRight } from 'react-icons/fi'
 import Reveal from './Reveal'
 
 const features = [
+  { Icon: FaRobot, label: 'AI assistant, in Hindi or English', tint: 'bg-brand-saffron/10 text-brand-saffron-dark' },
+  { Icon: FaMagic, label: 'AI lesson plans & papers', tint: 'bg-brand-blue/10 text-brand-blue' },
   { Icon: FaClipboardCheck, label: 'Live attendance', tint: 'bg-brand-blue/10 text-brand-blue' },
   { Icon: FaMoneyBillWave, label: 'Fees & finance', tint: 'bg-brand-green/10 text-brand-green-dark' },
   { Icon: FaComments, label: 'Parent messaging', tint: 'bg-brand-saffron/10 text-brand-saffron-dark' },
@@ -29,7 +33,7 @@ const features = [
 ]
 
 /**
- * Flagship-product band. The photo is kept inside a contained panel rather than
+ * Colegios product band. The photo is kept inside a contained panel rather than
  * washed across the background, so headline text always sits on solid colour.
  */
 const Colegios = () => {
@@ -55,12 +59,12 @@ const Colegios = () => {
           <div>
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3.5 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.22em] text-white">
-                Flagship product
+                Live in schools
               </span>
             </Reveal>
 
             <Reveal delay={80}>
-              <h2 className="mt-6 text-[32px] font-extrabold leading-[1.1] text-white sm:text-4xl mdl:text-[46px] xl:text-5xl">
+              <h2 className="mt-6 text-[32px] font-extrabold leading-[1.1] text-white sm:text-4xl/10 mdl:text-[46px] xl:text-5xl/none">
                 Colegios
                 <span className="mt-2 block text-white">runs the whole school day</span>
               </h2>
@@ -73,8 +77,9 @@ const Colegios = () => {
             <Reveal delay={160}>
               <p className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-white sm:text-[17px]">
                 Admissions, attendance, fees, exams, homework and the messages home — one platform
-                that administrators, teachers, students and parents all sign into. Built with Indian
-                schools, in Indian schools.
+                that administrators, teachers, students and parents all sign into. Staff can ask its AI
+                assistant in English, Hindi or Hinglish, and teachers get AI help with lesson plans,
+                question papers and worksheets. Built with Indian schools, in Indian schools.
               </p>
             </Reveal>
 
@@ -110,7 +115,7 @@ const Colegios = () => {
                   className="object-cover"
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-t from-[#16295f] via-[#16295f]/30 to-transparent"
+                  className="absolute inset-0 bg-linear-to-t from-[#16295f] via-[#16295f]/30 to-transparent"
                   aria-hidden="true"
                 />
                 <p className="absolute bottom-4 left-5 right-5 font-display text-[15px] font-semibold text-white">

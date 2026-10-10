@@ -1,5 +1,23 @@
 [
   {
+    "id": 8,
+    "title": "ChargeVeta — EV Charging Platform",
+    "description": "End-to-end software for EV charging networks. Charger makers, operators and fleets connect their OCPP chargers and go live with an operator console, a driver app with wallet and UPI, fleet billing and GST invoices. AI-enabled NOC monitoring watches every charger 24x7.",
+    "image": "/assets/images/products/ev-charging.jpg",
+    "status": "live",
+    "link": "https://www.chargeveta.in/",
+    "linkLabel": "Visit chargeveta.in"
+  },
+  {
+    "id": 6,
+    "title": "Colegios — School Management",
+    "description": "One platform for admissions, attendance, fees, exams and parent messaging, with an AI assistant for staff in English, Hindi or Hinglish and AI tools that draft lesson plans and question papers.",
+    "image": "/assets/images/products/school-v2.jpg",
+    "status": "live",
+    "link": "https://www.colegios.in/",
+    "linkLabel": "Visit colegios.in"
+  },
+  {
     "id": 1,
     "title": "URL Shortener",
     "description": "Transform long, unwieldy links into concise, shareable URLs. Our robust URL shortener provides click analytics, custom aliases, and high-speed redirection, making it perfect for marketing campaigns and social media sharing.",
@@ -35,16 +53,9 @@
     "status": "live"
   },
   {
-    "id": 6,
-    "title": "School Management System",
-    "description": "A comprehensive, easy-to-use platform to streamline academic administration. Manage student records, attendance, fee collection, and exams all from a single, intuitive dashboard.",
-    "image": "/assets/images/products/school-v2.jpg",
-    "status": "live"
-  },
-  {
     "id": 7,
-    "title": "One Stop EV Charging Solution",
-    "description": "One platform for a charging network: site and charger onboarding, live session monitoring, OCPP device management, tariffs and settlement, plus a driver app for finding a point and paying for the charge.",
+    "title": "Our next platform",
+    "description": "Another product is on the bench right now. We don't announce anything before it's live — when it ships, you'll find it here first.",
     "image": "",
     "status": "pipeline"
   }

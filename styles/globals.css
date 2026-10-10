@@ -1,6 +1,456 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* next/font sets --ff-* on the app wrapper, not :root, so these must be inlined
+   into each utility rather than resolved once as :root variables. */
+@theme inline {
+  --font-display: var(--ff-display), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--ff-body), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--ff-mono), ui-monospace, SFMono-Regular, monospace;
+  --font-bodyFont: var(--ff-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme {
+  /* Tailwind 3's fixed line-heights. v4's defaults are unitless ratios, which
+     grow when a size utility is paired with an arbitrary text-[Npx] override. */
+  --text-xs--line-height: 1rem;
+  --text-sm--line-height: 1.25rem;
+  --text-base--line-height: 1.5rem;
+  --text-lg--line-height: 1.75rem;
+  --text-xl--line-height: 1.75rem;
+  --text-2xl--line-height: 2rem;
+  --text-3xl--line-height: 2.25rem;
+  --text-4xl--line-height: 2.5rem;
+
+  --container-container: 1440px;
+  --container-contentContainer: 1140px;
+  --container-containerSmall: 1024px;
+  --container-containerxs: 768px;
+
+  --breakpoint-xs: 320px;
+  --breakpoint-sm: 375px;
+  --breakpoint-sml: 500px;
+  --breakpoint-md: 667px;
+  --breakpoint-mdl: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-lgl: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+
+
+  --color-brand-blue: #1d4ed8;
+  --color-brand-blue-light: #3b82f6;
+  --color-brand-blue-dark: #1e3a8a;
+  --color-brand-green: #16a34a;
+  --color-brand-green-light: #22c55e;
+  --color-brand-green-dark: #15803d;
+  --color-brand-saffron: #f97316;
+  --color-brand-saffron-light: #fb923c;
+  --color-brand-saffron-dark: #ea580c;
+  --color-brand-blue-soft: #93c5fd;
+  --color-brand-green-soft: #4ade80;
+  --color-brand-saffron-soft: #fdba74;
+
+  --color-cv-navy: #141a46;
+  --color-cv-navy-soft: #2a3168;
+  --color-cv-amber: #f4a51c;
+  --color-cv-volt: #2b50f0;
+  --color-cv-volt-on-dark: #9db0ff;
+
+  --color-ink: #0b1220;
+  --color-ink-800: #111a2e;
+  --color-ink-700: #1b2742;
+  --color-ink-600: #2a3a5c;
+  --color-surface: #f6f8fc;
+  --color-surface-2: #eef2f9;
+  --color-bodyColor: #3c565b;
+  --color-textLight: #dadbdd;
+  --color-textDark: #837e7c;
+  --color-hoverColor: #2b3856;
+  --color-textGreen: #16a34a;
+  --color-textBlue: #a0cfec;
+
+  --shadow-soft:
+    0 1px 2px rgba(11, 18, 32, 0.04), 0 8px 24px -8px rgba(11, 18, 32, 0.1);
+  --shadow-lift:
+    0 2px 4px rgba(11, 18, 32, 0.05), 0 24px 48px -16px rgba(11, 18, 32, 0.18);
+  --shadow-glow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 24px 80px -20px rgba(29, 78, 216, 0.45);
+  --shadow-navbarShadow: 0 10px 30px -10px rgba(2, 12, 25, 0.9);
+
+  --background-image-tricolor: linear-gradient(
+    90deg,
+    #1d4ed8 0%,
+    #16a34a 52%,
+    #f97316 100%
+  );
+  --background-image-tricolor-soft: linear-gradient(
+    90deg,
+    rgba(29, 78, 216, 0.16),
+    rgba(22, 163, 74, 0.16),
+    rgba(249, 115, 22, 0.16)
+  );
+  --background-image-tricolor-light: linear-gradient(
+    90deg,
+    #93c5fd 0%,
+    #4ade80 52%,
+    #fdba74 100%
+  );
+
+  --animate-float: float 16s ease-in-out infinite;
+  --animate-float-slow: floatSlow 20s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fadeIn 0.9s ease-out both;
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-spin-slow: spinSlow 34s linear infinite;
+  --animate-pulse-ring: pulseRing 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  --animate-bob: bob 3.4s ease-in-out infinite;
+  --animate-beam: beam 3.2s ease-in-out infinite;
+  --animate-current: current 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --transition-duration-400: 400ms;
+  --transition-duration-600: 600ms;
+  --transition-duration-900: 900ms;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    33% {
+      transform: translate3d(30px, -40px, 0) scale(1.06);
+    }
+    66% {
+      transform: translate3d(-24px, 22px, 0) scale(0.96);
+    }
+  }
+  @keyframes floatSlow {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(-40px, 32px, 0) scale(1.08);
+    }
+  }
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes spinSlow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes pulseRing {
+    0% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-9px);
+    }
+  }
+  @keyframes beam {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes current {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(260%);
+      opacity: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+
+@utility container-x {
+  @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 mdl:px-8 xl:px-10 2xl:max-w-[1440px];
+}
+
+@utility section-y {
+  @apply py-14 mdl:py-20 2xl:py-24;
+}
+
+@utility stripe {
+  @apply h-1 w-16 rounded-full bg-tricolor;
+}
+
+@utility eyebrow {
+  @apply font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-brand-blue sm:text-xs;
+}
+
+@utility btn {
+  /* ---- Buttons ------------------------------------------------------- */
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+}
+
+@utility btn-primary {
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+  @apply bg-brand-blue text-white shadow-[0_10px_30px_-10px_rgba(29,78,216,0.6)];
+  &:hover {
+    @apply -translate-y-0.5 bg-brand-blue-dark shadow-[0_18px_38px_-12px_rgba(29,78,216,0.7)];
+  }
+  &:active {
+    @apply translate-y-0 scale-[0.98];
+  }
+}
+
+@utility btn-saffron {
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+  @apply bg-brand-saffron text-white shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)];
+  &:hover {
+    @apply -translate-y-0.5 bg-brand-saffron-dark shadow-[0_18px_38px_-12px_rgba(249,115,22,0.7)];
+  }
+  &:active {
+    @apply translate-y-0 scale-[0.98];
+  }
+}
+
+@utility btn-green {
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+  @apply bg-brand-green text-white shadow-[0_10px_30px_-10px_rgba(22,163,74,0.6)];
+  &:hover {
+    @apply -translate-y-0.5 bg-brand-green-dark shadow-[0_18px_38px_-12px_rgba(22,163,74,0.7)];
+  }
+}
+
+@utility btn-ghost {
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+  @apply border border-[rgba(11,18,32,0.15)] bg-[rgba(255,255,255,0.7)] text-ink backdrop-blur-sm;
+  &:hover {
+    @apply -translate-y-0.5 border-[rgba(11,18,32,0.3)] bg-white;
+  }
+}
+
+@utility btn-ghost-dark {
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+  @apply border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] text-white backdrop-blur-sm;
+  &:hover {
+    @apply -translate-y-0.5 border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.1)];
+  }
+}
+
+@utility btn-white {
+  @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
+  @apply bg-white text-ink shadow-lg;
+  &:hover {
+    @apply -translate-y-0.5 bg-surface-2;
+  }
+}
+
+@utility card {
+  /* ---- Cards --------------------------------------------------------- */
+  @apply relative overflow-hidden rounded-3xl border border-[rgba(11,18,32,0.07)] bg-white shadow-soft transition-all duration-500 ease-out-expo;
+  &:hover {
+    @apply -translate-y-1.5 border-[rgba(11,18,32,0.12)] shadow-lift;
+  }
+}
+
+@utility card-stripe {
+  &::before {
+    content: '';
+    @apply absolute inset-x-0 top-0 z-20 h-[3px] origin-left scale-x-0 bg-tricolor transition-transform duration-500 ease-out-expo;
+  }
+  &:hover::before {
+    @apply scale-x-100;
+  }
+}
+
+@utility glass {
+  @apply border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.06)] backdrop-blur-xl;
+}
+
+@utility field {
+  /* ---- Forms --------------------------------------------------------- */
+  @apply min-h-[48px] w-full rounded-2xl border border-[rgba(11,18,32,0.1)] bg-white px-4 py-3.5 text-[15px] text-ink transition-all duration-300;
+  &::placeholder {
+    color: rgba(11, 18, 32, 0.35);
+  }
+  &:focus {
+    @apply border-brand-blue outline-hidden ring-4 ring-[rgba(29,78,216,0.12)];
+  }
+}
+
+@utility label {
+  @apply mb-1.5 block text-sm font-medium;
+  color: rgba(11, 18, 32, 0.75);
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility reveal-left {
+  transform: translateX(-34px);
+}
+
+@utility reveal-right {
+  transform: translateX(34px);
+}
+
+@utility reveal-scale {
+  transform: scale(0.94);
+}
+
+@utility is-visible {
+  &.reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility text-gradient-tricolor {
+  @apply bg-tricolor bg-clip-text text-transparent;
+}
+
+@utility text-gradient-tricolor-light {
+  /* For use on coloured/dark grounds, where the deep blue stop would vanish */
+  @apply bg-tricolor-light bg-clip-text text-transparent;
+}
+
+@utility mask-fade-x {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@utility bg-brand-gradient {
+  /* The one blue gradient every dark band shares — change these stops to tune
+     the depth of the CTA band, the Colegios band and the services spotlight
+     together. Kept off the brand-blue-dark token, which belongs to the logo. */
+  background-image: linear-gradient(
+    135deg,
+    #16295f 0%,
+    #1a3f9e 52%,
+    #2055ca 100%
+  );
+}
+
+@utility bg-brand-gradient-ev {
+  background-image: linear-gradient(
+    135deg,
+    #16295f 0%,
+    #1a3f9e 48%,
+    #127034 100%
+  );
+}
+
+@utility bg-brand-deep {
+  background-color: #16295f;
+}
+
+@utility bg-dots {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.14) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+@utility bg-dots-ink {
+  background-image: radial-gradient(
+    rgba(11, 18, 32, 0.09) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
 
 @layer base {
   :root {
@@ -48,194 +498,6 @@
   a {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
-  }
-}
-
-/*
- * Note: Tailwind 3.3's @apply cannot resolve `color/opacity` modifiers inside a
- * class whose name also appears in scanned markup, so component rules below use
- * explicit rgba() values instead of the slash syntax. Slash syntax is still fine
- * in JSX className strings.
- */
-@layer components {
-  .container-x {
-    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-6 mdl:px-8 xl:px-10 2xl:max-w-[1440px];
-  }
-
-  .section-y {
-    @apply py-16 mdl:py-24 xl:py-28;
-  }
-
-  .stripe {
-    @apply h-1 w-16 rounded-full bg-tricolor;
-  }
-
-  .eyebrow {
-    @apply font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-brand-blue sm:text-xs;
-  }
-
-  /* ---- Buttons ------------------------------------------------------- */
-  .btn,
-  .btn-primary,
-  .btn-saffron,
-  .btn-green,
-  .btn-ghost,
-  .btn-ghost-dark,
-  .btn-white {
-    @apply inline-flex min-h-[46px] cursor-pointer select-none items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ease-out-expo sm:text-[15px];
-  }
-
-  .btn-primary {
-    @apply bg-brand-blue text-white shadow-[0_10px_30px_-10px_rgba(29,78,216,0.6)];
-  }
-  .btn-primary:hover {
-    @apply -translate-y-0.5 bg-brand-blue-dark shadow-[0_18px_38px_-12px_rgba(29,78,216,0.7)];
-  }
-  .btn-primary:active {
-    @apply translate-y-0 scale-[0.98];
-  }
-
-  .btn-saffron {
-    @apply bg-brand-saffron text-white shadow-[0_10px_30px_-10px_rgba(249,115,22,0.6)];
-  }
-  .btn-saffron:hover {
-    @apply -translate-y-0.5 bg-brand-saffron-dark shadow-[0_18px_38px_-12px_rgba(249,115,22,0.7)];
-  }
-  .btn-saffron:active {
-    @apply translate-y-0 scale-[0.98];
-  }
-
-  .btn-green {
-    @apply bg-brand-green text-white shadow-[0_10px_30px_-10px_rgba(22,163,74,0.6)];
-  }
-  .btn-green:hover {
-    @apply -translate-y-0.5 bg-brand-green-dark shadow-[0_18px_38px_-12px_rgba(22,163,74,0.7)];
-  }
-
-  .btn-ghost {
-    @apply border border-[rgba(11,18,32,0.15)] bg-[rgba(255,255,255,0.7)] text-ink backdrop-blur;
-  }
-  .btn-ghost:hover {
-    @apply -translate-y-0.5 border-[rgba(11,18,32,0.3)] bg-white;
-  }
-
-  .btn-ghost-dark {
-    @apply border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] text-white backdrop-blur;
-  }
-  .btn-ghost-dark:hover {
-    @apply -translate-y-0.5 border-[rgba(255,255,255,0.4)] bg-[rgba(255,255,255,0.1)];
-  }
-
-  .btn-white {
-    @apply bg-white text-ink shadow-lg;
-  }
-  .btn-white:hover {
-    @apply -translate-y-0.5 bg-surface-2;
-  }
-
-  /* ---- Cards --------------------------------------------------------- */
-  .card {
-    @apply relative overflow-hidden rounded-3xl border border-[rgba(11,18,32,0.07)] bg-white shadow-soft transition-all duration-500 ease-out-expo;
-  }
-  .card:hover {
-    @apply -translate-y-1.5 border-[rgba(11,18,32,0.12)] shadow-lift;
-  }
-
-  .card-stripe::before {
-    content: '';
-    @apply absolute inset-x-0 top-0 z-20 h-[3px] origin-left scale-x-0 bg-tricolor transition-transform duration-500 ease-out-expo;
-  }
-  .card-stripe:hover::before {
-    @apply scale-x-100;
-  }
-
-  .glass {
-    @apply border border-[rgba(255,255,255,0.15)] bg-[rgba(255,255,255,0.06)] backdrop-blur-xl;
-  }
-
-  /* ---- Forms --------------------------------------------------------- */
-  .field {
-    @apply min-h-[48px] w-full rounded-2xl border border-[rgba(11,18,32,0.1)] bg-white px-4 py-3.5 text-[15px] text-ink transition-all duration-300;
-  }
-  .field::placeholder {
-    color: rgba(11, 18, 32, 0.35);
-  }
-  .field:focus {
-    @apply border-brand-blue outline-none ring-4 ring-[rgba(29,78,216,0.12)];
-  }
-
-  .label {
-    @apply mb-1.5 block text-sm font-medium;
-    color: rgba(11, 18, 32, 0.75);
-  }
-}
-
-@layer utilities {
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition:
-      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-    transition-delay: var(--reveal-delay, 0ms);
-    will-change: opacity, transform;
-  }
-  .reveal-left {
-    transform: translateX(-34px);
-  }
-  .reveal-right {
-    transform: translateX(34px);
-  }
-  .reveal-scale {
-    transform: scale(0.94);
-  }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
-  }
-
-  .text-gradient-tricolor {
-    @apply bg-tricolor bg-clip-text text-transparent;
-  }
-
-  /* For use on coloured/dark grounds, where the deep blue stop would vanish */
-  .text-gradient-tricolor-light {
-    @apply bg-tricolor-light bg-clip-text text-transparent;
-  }
-
-  .mask-fade-x {
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  }
-
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  /* The one blue gradient every dark band shares — change these stops to tune
-     the depth of the CTA band, the Colegios band and the services spotlight
-     together. Kept off the brand-blue-dark token, which belongs to the logo. */
-  .bg-brand-gradient {
-    background-image: linear-gradient(135deg, #16295f 0%, #1a3f9e 52%, #2055ca 100%);
-  }
-  .bg-brand-gradient-ev {
-    background-image: linear-gradient(135deg, #16295f 0%, #1a3f9e 48%, #127034 100%);
-  }
-  .bg-brand-deep {
-    background-color: #16295f;
-  }
-
-  .bg-dots {
-    background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-    background-size: 26px 26px;
-  }
-  .bg-dots-ink {
-    background-image: radial-gradient(rgba(11, 18, 32, 0.09) 1px, transparent 1px);
-    background-size: 26px 26px;
   }
 }
 

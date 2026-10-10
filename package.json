@@ -6,31 +6,32 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@types/node": "18.15.13",
-    "@types/react": "18.0.37",
-    "@types/react-dom": "18.0.11",
-    "autoprefixer": "10.4.14",
-    "eslint": "^10.1.0",
-    "eslint-config-next": "^16.2.1",
-    "next": "^16.2.1",
-    "postcss": "8.4.23",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-icons": "^4.8.0",
-    "react-multi-carousel": "^2.8.3",
-    "react-qr-code": "^2.0.18",
-    "sharp": "^0.34.5",
-    "slick-carousel": "^1.8.1",
-    "swiper": "^9.3.1",
-    "tailwindcss": "3.3.1"
+    "@tailwindcss/postcss": "^4.3.3",
+    "eslint-config-next": "^16.4.0",
+    "next": "^16.4.0",
+    "postcss": "^8.5.29",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-icons": "^4.12.0",
+    "react-multi-carousel": "2.8.5",
+    "react-qr-code": "^2.2.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.10",
-    "react-slick": "^0.31.0",
-    "typescript": "^6.0.2",
-    "typewriter-effect": "^2.22.0"
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "typescript": "~6.0.3"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "@next/eslint-plugin-next": {
+      "fast-glob": "npm:tinyglobby@^0.2.17"
+    }
   }
 }

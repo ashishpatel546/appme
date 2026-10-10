@@ -38,7 +38,7 @@ const SectionTitle = ({
 
       <Reveal delay={70}>
         <Heading
-          className={`mt-3 text-[30px] font-extrabold leading-[1.12] sm:text-4xl mdl:text-[42px] xl:text-5xl ${
+          className={`mt-3 text-[30px] font-extrabold leading-[1.12] sm:text-4xl/10 mdl:text-[42px] xl:text-5xl/none ${
             onDark ? 'text-white' : 'text-ink'
           }`}
         >
@@ -53,7 +53,7 @@ const SectionTitle = ({
       {subtitle && (
         <Reveal delay={190}>
           <p
-            className={`mt-5 max-w-2xl text-[15px] leading-relaxed sm:text-base mdl:text-[17px] ${
+            className={`mt-5 max-w-2xl text-[15px] leading-relaxed sm:text-base/6 mdl:text-[17px] ${
               onDark ? 'text-white/70' : 'text-ink/65'
             }`}
           >

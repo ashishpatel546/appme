@@ -32,7 +32,7 @@ const CTABand = ({
             <div className="relative flex flex-col items-start gap-10 lgl:flex-row lgl:items-center lgl:justify-between">
               <div className="max-w-2xl">
                 <span className="font-mono text-[11px] font-medium uppercase tracking-[0.22em] text-brand-saffron-light sm:text-xs">Next step</span>
-                <h2 className="mt-4 text-[30px] font-extrabold leading-[1.12] sm:text-4xl mdl:text-[42px]">
+                <h2 className="mt-4 text-[30px] font-extrabold leading-[1.12] sm:text-4xl/10 mdl:text-[42px]">
                   {title}
                 </h2>
                 <p className="mt-5 text-[15.5px] leading-relaxed text-white/90 sm:text-[17px]">

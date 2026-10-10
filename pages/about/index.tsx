@@ -46,7 +46,7 @@ const values = [
   {
     n: 'Soft',
     title: 'Built for the ground truth',
-    copy: 'Our school software was written next to the people using it — patchy networks, busy mornings, a hundred parents at the gate.',
+    copy: 'Our software is written next to the people using it — busy school mornings, patchy networks, a driver waiting at a charger.',
     accent: 'text-brand-saffron-dark',
     soft: 'bg-brand-saffron/10',
   },
@@ -57,7 +57,7 @@ const About = () => {
     <>
       <SEO
         title="About Us — AppMe Soft Pvt Ltd."
-        description="How AppMe Soft grew from a services team into a product company building Colegios school management, cloud infrastructure and AI systems from Delhi, India."
+        description="How AppMe Soft grew from a services team into a product company building ChargeVeta EV charging software, Colegios school management, cloud infrastructure and AI systems from Delhi, India."
         ogUrl="https://appme.in/about"
       />
 
@@ -111,9 +111,10 @@ const About = () => {
               <div>
                 <SectionTitle align="left" eyebrow="Our story" title="Services first, products next" />
                 <Reveal delay={120}>
-                  <div className="mt-7 space-y-5 text-[15.5px] leading-relaxed text-ink/65 mdl:text-base">
+                  <div className="mt-7 space-y-5 text-[15.5px] leading-relaxed text-ink/65 mdl:text-base/6">
                     <p>
-                      We began as a services team taking on other people&apos;s hard problems: cloud
+                      We began as Sologence Technologies, a services team taking on other
+                      people&apos;s hard problems: cloud
                       migrations, integrations, systems that had outgrown their original design. That
                       work taught us where software actually fails — rarely in the demo, usually in
                       the third month of daily use.
@@ -123,6 +124,12 @@ const About = () => {
                       schools, watching administrators fight spreadsheets at eight in the morning.
                       Everything we ship now carries that habit: build it where it will be used, then
                       stay long enough to see it hold.
+                    </p>
+                    <p>
+                      ChargeVeta came next: software for India&apos;s EV charging networks. A charger
+                      maker or operator connects their chargers, and they go live with drivers and
+                      fleets — charger control, a driver app, payments, fleet billing and GST
+                      invoices included.
                     </p>
                   </div>
                 </Reveal>
@@ -142,11 +149,12 @@ const About = () => {
                   title="Fewer moving parts, more working days"
                 />
                 <Reveal delay={120}>
-                  <p className="mt-7 text-[15.5px] leading-relaxed text-ink/65 mdl:text-base">
-                    Colegios is our clearest statement of intent: one platform where a school&apos;s
-                    admissions, attendance, fees, exams and parent messaging live together instead of
-                    in six disconnected tools. The same thinking goes into the cloud, data and AI work
-                    we do for businesses.
+                  <p className="mt-7 text-[15.5px] leading-relaxed text-ink/65 mdl:text-base/6">
+                    Our platforms are our clearest statement of intent. Colegios puts a school&apos;s
+                    admissions, attendance, fees, exams and parent messaging in one place instead of
+                    six disconnected tools. ChargeVeta does the same for a charging network: chargers,
+                    drivers, fleets and billing on one platform. The same thinking goes into the
+                    cloud, data and AI work we do for businesses.
                   </p>
                 </Reveal>
 

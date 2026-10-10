@@ -73,7 +73,7 @@ const Clause = ({
       <h2 className="font-display text-[22px] font-bold leading-snug text-ink mdl:text-[26px]">
         {title}
       </h2>
-      <div className="mt-5 space-y-4 text-[15.5px] leading-relaxed text-ink/65 mdl:text-base">
+      <div className="mt-5 space-y-4 text-[15.5px] leading-relaxed text-ink/65 mdl:text-base/6">
         {children}
       </div>
     </Reveal>
@@ -209,7 +209,8 @@ const Privacy = () => {
                   <ul className="ml-1 space-y-2.5">
                     {[
                       <>
-                        <span className="font-medium text-ink/80">Colegios</span> and our other
+                        <span className="font-medium text-ink/80">Colegios</span>,{' '}
+                        <span className="font-medium text-ink/80">ChargeVeta</span> and our other
                         products. When a school or business uses one of our platforms, we handle the
                         data inside it as a Data Processor on that customer&apos;s instructions,
                         under the agreement signed with them. Student, parent and staff records
@@ -223,7 +224,8 @@ const Privacy = () => {
                       </>,
                       <>
                         Websites we link to, including{' '}
-                        <span className="font-medium text-ink/80">colegios.in</span>, WhatsApp and
+                        <span className="font-medium text-ink/80">colegios.in</span>,{' '}
+                        <span className="font-medium text-ink/80">chargeveta.in</span>, WhatsApp and
                         our social profiles. Once you leave appme.in, that site&apos;s own policy
                         applies.
                       </>,

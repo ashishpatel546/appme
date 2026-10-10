@@ -11,7 +11,7 @@ interface SEOProps {
 export default function SEO({ 
   title, 
   description, 
-  keywords = "AppMe Soft, AppMe Soft Pvt Ltd, Colegios, software development, school management system, IT consulting, cloud architecture, web development, mobile apps",
+  keywords = "AppMe Soft, AppMe Soft Pvt Ltd, ChargeVeta, EV charging software, charging station management, OCPP, Colegios, software development, school management system, IT consulting, cloud architecture, web development, mobile apps",
   ogImage = "/assets/images/about1.jpg",
   ogUrl = "https://appme.in"
 }: SEOProps) {

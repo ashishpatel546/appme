@@ -21,7 +21,7 @@ const Journey = () => {
         <SectionTitle
           eyebrow="Where we've been"
           title="The company journey"
-          subtitle="Three years from a small services team to a product company with software running in schools every morning."
+          subtitle="Three years from a small services team to a product company with software running in schools and at EV chargers every day."
         />
 
         <div className="mt-14 grid gap-8 lgl:grid-cols-12 lgl:gap-10">
@@ -92,7 +92,7 @@ const Journey = () => {
 
                 <div className="mt-5 space-y-4">
                   {activeData.paragraphs.map((para, index) => (
-                    <p key={index} className="text-[15px] leading-relaxed text-ink/65 mdl:text-base">
+                    <p key={index} className="text-[15px] leading-relaxed text-ink/65 mdl:text-base/6">
                       {para}
                     </p>
                   ))}

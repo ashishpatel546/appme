@@ -13,6 +13,19 @@ const socials = [
   { label: 'Facebook', href: '#', Icon: SiFacebook },
 ]
 
+const platforms = [
+  {
+    name: 'ChargeVeta',
+    href: 'https://www.chargeveta.in/',
+    copy: 'EV charging, end to end — chargers, drivers, fleets and billing.',
+  },
+  {
+    name: 'Colegios',
+    href: 'https://www.colegios.in/',
+    copy: 'School management, end to end — admissions to report cards.',
+  },
+]
+
 const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-brand-deep text-white">
@@ -35,9 +48,9 @@ const Footer = () => {
           <div className="mdl:col-span-5 xl:col-span-4">
             <Logo onDark withDescriptor />
             <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-white/70">
-              A product-driven software company from Delhi, India. We build school platforms, AI
-              and automation products, cloud systems and EV charging software — and we run them
-              long after launch.
+              A product-driven software company from Delhi, India. We build EV charging and school
+              platforms, AI and automation products and cloud systems — and we run them long after
+              launch.
             </p>
 
             <div className="mt-7 flex items-center gap-3">
@@ -83,21 +96,25 @@ const Footer = () => {
           {/* Product */}
           <div className="mdl:col-span-4 xl:col-span-3">
             <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-white/70">
-              Flagship product
+              Our platforms
             </h3>
-            <a
-              href="https://www.colegios.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 block rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.07]"
-            >
-              <span className="flex items-center gap-1 font-display font-semibold text-white">
-                Colegios <FiArrowUpRight className="text-brand-saffron" />
-              </span>
-              <span className="mt-1 block text-sm leading-relaxed text-white/70">
-                School management, end to end — admissions to report cards.
-              </span>
-            </a>
+            <ul className="mt-5 space-y-3">
+              {platforms.map((p) => (
+                <li key={p.name}>
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-2xl border border-white/10 bg-white/4 p-4 transition-all duration-300 ease-out-expo hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.07]"
+                  >
+                    <span className="flex items-center gap-1 font-display font-semibold text-white">
+                      {p.name} <FiArrowUpRight className="text-brand-saffron" />
+                    </span>
+                    <span className="mt-1 block text-sm leading-relaxed text-white/70">{p.copy}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Contact */}

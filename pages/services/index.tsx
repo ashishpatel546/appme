@@ -11,6 +11,17 @@ import Process from '@/components/Process'
 import CTABand from '@/components/CTABand'
 import servicesData from '@/public/data/services.json'
 import SEO from '@/components/SEO'
+import { ChargeVetaMark, CHARGEVETA_URL, CHARGEVETA_DEMO } from '@/components/ChargeVeta'
+
+const chargevetaPoints = [
+  'Any OCPP 1.6J, 2.0.1 or 2.1 charger, any make',
+  'Remote start, stop, reset and firmware updates',
+  'Driver app with wallet, UPI and card payments',
+  'Fleet portal with monthly or per-driver billing',
+  'GST invoice for every session, refunds as credit notes',
+  'A separate network for each customer a maker sells to',
+  'AI-enabled NOC monitoring, 24x7',
+]
 
 const colegiosPoints = [
   'Admissions, attendance and timetables',
@@ -19,6 +30,8 @@ const colegiosPoints = [
   'Parent messaging and notice boards',
   'Staff HR, payroll and biometric attendance',
   'Library, transport and gate security',
+  'AI assistant in English, Hindi or Hinglish',
+  'AI lesson plans, question papers and worksheets',
 ]
 
 const engagements = [
@@ -47,7 +60,7 @@ const Services = () => {
     <>
       <SEO
         title="Our Services — AppMe Soft Pvt Ltd."
-        description="Product development, IT consulting, cloud solutions, DevOps engineering, cyber security and data/AI services from AppMe Soft Pvt Ltd, plus the Colegios school management platform."
+        description="Product development, IT consulting, cloud solutions, DevOps engineering, cyber security and data/AI services from AppMe Soft Pvt Ltd, plus the ChargeVeta EV charging and Colegios school management platforms."
         ogUrl="https://appme.in/services"
       />
 
@@ -81,9 +94,75 @@ const Services = () => {
           </div>
         </PageHeader>
 
-        {/* Colegios spotlight */}
+        {/* Platform spotlights */}
         <section className="bg-white pb-4 pt-14 mdl:pt-16">
-          <div className="container-x">
+          <div className="container-x space-y-6 mdl:space-y-7">
+            <Reveal direction="scale">
+              <div className="relative isolate overflow-hidden rounded-[32px] bg-cv-navy p-7 text-white shadow-lift mdl:p-12">
+                <div
+                  className="pointer-events-none absolute -right-24 -top-24 h-[380px] w-[380px] rounded-full bg-cv-volt/35 blur-[110px]"
+                  aria-hidden="true"
+                />
+                <div className="absolute inset-0 bg-dots opacity-20" aria-hidden="true" />
+
+                <div className="relative grid gap-10 lgl:grid-cols-2 lgl:items-center lgl:gap-14">
+                  <div>
+                    <div className="flex items-center gap-3">
+                      <ChargeVetaMark size={44} />
+                      <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-[13px] font-medium">
+                        EV charging platform
+                      </span>
+                    </div>
+                    <h2 className="mt-6 text-[30px] font-extrabold leading-[1.1] sm:text-4xl/10 mdl:text-[44px]">
+                      ChargeVeta
+                      <span className="mt-1 block text-[20px] font-semibold text-white sm:text-2xl">
+                        Put your chargers live, with everything behind them
+                      </span>
+                    </h2>
+                    <p className="mt-5 max-w-xl text-[15.5px] leading-relaxed text-white/85 sm:text-[17px]">
+                      For charger manufacturers, operators and fleets. Connect your chargers and they
+                      go live for your customers, their drivers and their fleets — console, driver
+                      app, payments and GST invoicing included, run by the team that built it.
+                    </p>
+
+                    <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                      <a
+                        href={CHARGEVETA_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-white group w-full sm:w-auto"
+                      >
+                        Explore ChargeVeta
+                        <FiArrowUpRight className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
+                      <a
+                        href={CHARGEVETA_DEMO}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-ghost-dark w-full sm:w-auto"
+                      >
+                        Book a demo
+                      </a>
+                    </div>
+                  </div>
+
+                  <ul className="grid gap-2.5 sml:grid-cols-2 lgl:grid-cols-1 xl:grid-cols-2">
+                    {chargevetaPoints.map((point) => (
+                      <li
+                        key={point}
+                        className="flex items-start gap-3 rounded-2xl border border-white/20 bg-white/8 p-3.5"
+                      >
+                        <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-cv-amber text-cv-navy">
+                          <FiCheck size={13} />
+                        </span>
+                        <span className="text-[14.5px] leading-snug text-white">{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </Reveal>
+
             <Reveal direction="scale">
               <div className="relative isolate overflow-hidden rounded-[32px] bg-brand-gradient p-7 text-white shadow-lift mdl:p-12">
                 <span className="absolute inset-x-0 top-0 h-1 bg-tricolor" aria-hidden="true" />
@@ -99,10 +178,10 @@ const Services = () => {
 
                 <div className="relative grid gap-10 lgl:grid-cols-2 lgl:items-center lgl:gap-14">
                   <div>
-                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.2em] backdrop-blur">
-                      Flagship platform
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 font-mono text-[10.5px] uppercase tracking-[0.2em] backdrop-blur-sm">
+                      School platform
                     </span>
-                    <h2 className="mt-6 text-[30px] font-extrabold leading-[1.1] sm:text-4xl mdl:text-[44px]">
+                    <h2 className="mt-6 text-[30px] font-extrabold leading-[1.1] sm:text-4xl/10 mdl:text-[44px]">
                       Colegios
                       <span className="mt-1 block text-[20px] font-semibold text-white sm:text-2xl">
                         School management, from the gate to the report card
@@ -139,7 +218,7 @@ const Services = () => {
                     {colegiosPoints.map((point) => (
                       <li
                         key={point}
-                        className="flex items-start gap-3 rounded-2xl border border-white/25 bg-white/[0.14] p-3.5 backdrop-blur transition-colors duration-300 hover:bg-white/[0.22]"
+                        className="flex items-start gap-3 rounded-2xl border border-white/25 bg-white/[0.14] p-3.5 backdrop-blur-sm transition-colors duration-300 hover:bg-white/22"
                       >
                         <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-green text-white">
                           <FiCheck size={13} />

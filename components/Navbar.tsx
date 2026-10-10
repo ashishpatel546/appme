@@ -57,7 +57,7 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-ink/[0.08] bg-white transition-shadow duration-500 ease-out-expo ${
+      className={`sticky top-0 z-50 w-full border-b border-ink/8 bg-white transition-shadow duration-500 ease-out-expo ${
         scrolled ? 'shadow-[0_6px_24px_-16px_rgba(11,18,32,0.5)]' : ''
       }`}
     >
@@ -128,12 +128,12 @@ export const Navbar = () => {
 
       {/* Mobile drawer */}
       <div
-        className={`fixed inset-0 z-[60] mdl:hidden ${showMenu ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`fixed inset-0 z-60 mdl:hidden ${showMenu ? 'pointer-events-auto' : 'pointer-events-none'}`}
         aria-hidden={!showMenu}
       >
         <div
           onClick={() => setShowMenu(false)}
-          className={`absolute inset-0 bg-ink/45 backdrop-blur-sm transition-opacity duration-400 ${
+          className={`absolute inset-0 bg-ink/45 backdrop-blur-xs transition-opacity duration-400 ${
             showMenu ? 'opacity-100' : 'opacity-0'
           }`}
         />

@@ -17,7 +17,7 @@ const Logo = ({ onDark = false, className = '', withDescriptor = false }: Props)
   return (
     <span className={`group inline-flex items-center gap-1 ${className}`}>
       <span
-        className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg font-display text-lg font-black leading-none shadow-md transition-transform duration-500 ease-out-expo group-hover:scale-105 mdl:h-9 mdl:w-9 mdl:text-xl ${
+        className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg font-display text-lg font-black leading-none shadow-md transition-transform duration-500 ease-out-expo group-hover:scale-105 mdl:h-9 mdl:w-9 mdl:text-xl/7 ${
           onDark ? 'bg-white text-brand-blue-dark' : 'bg-brand-blue-dark text-white'
         }`}
       >

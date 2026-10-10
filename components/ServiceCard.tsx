@@ -40,11 +40,11 @@ const ServiceCard = ({ title, des, link, image, index = 0 }: Props) => {
           className="object-cover transition-transform duration-900 ease-out-expo group-hover:scale-[1.08]"
         />
         <div
-          className="absolute inset-0 bg-gradient-to-t from-ink/45 via-transparent to-transparent"
+          className="absolute inset-0 bg-linear-to-t from-ink/45 via-transparent to-transparent"
           aria-hidden="true"
         />
         <span
-          className={`absolute left-4 top-4 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] backdrop-blur ${a.chip}`}
+          className={`absolute left-4 top-4 rounded-full px-3 py-1 font-mono text-[10.5px] uppercase tracking-[0.16em] backdrop-blur-sm ${a.chip}`}
         >
           {String(index + 1).padStart(2, '0')}
         </span>
