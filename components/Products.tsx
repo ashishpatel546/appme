@@ -48,7 +48,7 @@ const Products = () => {
             align="left"
             eyebrow="What we've built"
             title="Our product line"
-            subtitle="Software we designed, shipped and still maintain — across EV charging, schools, marketing, documents and travel."
+            subtitle="Software we designed, shipped and still maintain — across EV charging, schools, everyday file tools, marketing, documents and travel."
             className="lgl:max-w-2xl"
           />
           <Reveal delay={120}>

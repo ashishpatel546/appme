@@ -24,6 +24,11 @@ const platforms = [
     href: 'https://www.colegios.in/',
     copy: 'School management, end to end — admissions to report cards.',
   },
+  {
+    name: 'Growny',
+    href: 'https://growny.in/',
+    copy: 'Free PDF, photo and everyday tools that run in your browser.',
+  },
 ]
 
 const Footer = () => {

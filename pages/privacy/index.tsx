@@ -225,7 +225,8 @@ const Privacy = () => {
                       <>
                         Websites we link to, including{' '}
                         <span className="font-medium text-ink/80">colegios.in</span>,{' '}
-                        <span className="font-medium text-ink/80">chargeveta.in</span>, WhatsApp and
+                        <span className="font-medium text-ink/80">chargeveta.in</span>,{' '}
+                        <span className="font-medium text-ink/80">growny.in</span>, WhatsApp and
                         our social profiles. Once you leave appme.in, that site&apos;s own policy
                         applies.
                       </>,
